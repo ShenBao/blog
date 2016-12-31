@@ -1,15 +1,15 @@
 {
-    "name": "blog",
-    "version": "0.0.1",
-    "description": "",
+    "name": "秋思浪人",
+    "version": "1.0.0",
+    "description": "Welcome To ShenBao's Blog!",
     "keywords": [
         ""
     ],
-    "homepage": "http://JSLite.io",
+    "homepage": "https://shenbao.github.io/blog/",
     "author": "shenbao <shenbaoone@gmail.com>",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/ShenBao"
     },
     "licenses": "MIT",
     "idoc": {
