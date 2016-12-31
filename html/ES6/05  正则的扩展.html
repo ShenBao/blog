@@ -37,12 +37,12 @@
 <div class="container">
 
     <div class="page-toc">
-        <ul><li><a href="#t0RegExp构造函数">RegExp构造函数</a></li><li><a href="#t1字符串的正则方法">字符串的正则方法</a></li><li><a href="#t2u修饰符">u修饰符</a></li><li><a href="#t3y 修饰符">y 修饰符</a></li><li><a href="#t4sticky属性">sticky属性</a></li><li><a href="#t5flags属性">flags属性</a></li><li><a href="#t6RegExp.escape()">RegExp.escape()</a></li><li><a href="#t7s 修饰符：dotAll 模式">s 修饰符：dotAll 模式</a></li><li><a href="#t8后行断言">后行断言</a></li><li><a href="#t9Unicode属性类">Unicode属性类</a></li></ul>
+        <ul><li><a href="#t0正则的扩展">正则的扩展</a><ul><li><a href="#t1RegExp构造函数">RegExp构造函数</a></li><li><a href="#t2字符串的正则方法">字符串的正则方法</a></li><li><a href="#t3u修饰符">u修饰符</a></li><li><a href="#t4y 修饰符">y 修饰符</a></li><li><a href="#t5sticky属性">sticky属性</a></li><li><a href="#t6flags属性">flags属性</a></li><li><a href="#t7RegExp.escape()">RegExp.escape()</a></li><li><a href="#t8s 修饰符：dotAll 模式">s 修饰符：dotAll 模式</a></li><li><a href="#t9后行断言">后行断言</a></li><li><a href="#t10Unicode属性类">Unicode属性类</a></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
-        <p>&#xFEFF;# &#x6B63;&#x5219;&#x7684;&#x6269;&#x5C55;</p>
-<h2 id="t0RegExp&#x6784;&#x9020;&#x51FD;&#x6570;">RegExp&#x6784;&#x9020;&#x51FD;&#x6570; <a href="#t0RegExp&#x6784;&#x9020;&#x51FD;&#x6570;"> # </a></h2>
+        <h1 id="t0&#x6B63;&#x5219;&#x7684;&#x6269;&#x5C55;">&#x6B63;&#x5219;&#x7684;&#x6269;&#x5C55; <a href="#t0&#x6B63;&#x5219;&#x7684;&#x6269;&#x5C55;"> # </a></h1>
+<h2 id="t1RegExp&#x6784;&#x9020;&#x51FD;&#x6570;">RegExp&#x6784;&#x9020;&#x51FD;&#x6570; <a href="#t1RegExp&#x6784;&#x9020;&#x51FD;&#x6570;"> # </a></h2>
 <p>&#x5728;ES5&#x4E2D;&#xFF0C;RegExp&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x6709;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
 <p>&#x7B2C;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#xFF0C;&#x53C2;&#x6570;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD9;&#x65F6;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#xFF08;flag&#xFF09;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&apos;xyz&apos;</span>, <span class="hljs-string">&apos;i&apos;</span>);
@@ -63,7 +63,7 @@
 <span class="hljs-comment">// &quot;i&quot;</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x539F;&#x6709;&#x6B63;&#x5219;&#x5BF9;&#x8C61;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#x662F;<code>ig</code>&#xFF0C;&#x5B83;&#x4F1A;&#x88AB;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;<code>i</code>&#x8986;&#x76D6;&#x3002;</p>
-<h2 id="t1&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5; <a href="#t1&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5;"> # </a></h2>
+<h2 id="t2&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5; <a href="#t2&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6B63;&#x5219;&#x65B9;&#x6CD5;"> # </a></h2>
 <p>&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x5171;&#x6709;4&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>match()</code>&#x3001;<code>replace()</code>&#x3001;<code>search()</code>&#x548C;<code>split()</code>&#x3002;</p>
 <p>ES6&#x5C06;&#x8FD9;4&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8BED;&#x8A00;&#x5185;&#x90E8;&#x5168;&#x90E8;&#x8C03;&#x7528;RegExp&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x4ECE;&#x800C;&#x505A;&#x5230;&#x6240;&#x6709;&#x4E0E;&#x6B63;&#x5219;&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5168;&#x90FD;&#x5B9A;&#x4E49;&#x5728;RegExp&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p>
 <ul>
@@ -72,7 +72,7 @@
 <li><code>String.prototype.search</code> &#x8C03;&#x7528; <code>RegExp.prototype[Symbol.search]</code></li>
 <li><code>String.prototype.split</code> &#x8C03;&#x7528; <code>RegExp.prototype[Symbol.split]</code></li>
 </ul>
-<h2 id="t2u&#x4FEE;&#x9970;&#x7B26;">u&#x4FEE;&#x9970;&#x7B26; <a href="#t2u&#x4FEE;&#x9970;&#x7B26;"> # </a></h2>
+<h2 id="t3u&#x4FEE;&#x9970;&#x7B26;">u&#x4FEE;&#x9970;&#x7B26; <a href="#t3u&#x4FEE;&#x9970;&#x7B26;"> # </a></h2>
 <p>ES6&#x5BF9;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6DFB;&#x52A0;&#x4E86;<code>u</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x542B;&#x4E49;&#x4E3A;&#x201C;Unicode&#x6A21;&#x5F0F;&#x201D;&#xFF0C;&#x7528;&#x6765;&#x6B63;&#x786E;&#x5904;&#x7406;&#x5927;&#x4E8E;<code>\uFFFF</code>&#x7684;Unicode&#x5B57;&#x7B26;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F1A;&#x6B63;&#x786E;&#x5904;&#x7406;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x7684;UTF-16&#x7F16;&#x7801;&#x3002;</p>
 <pre><code class="lang-javascript">/^\uD83D/u.test(<span class="hljs-string">&apos;\uD83D\uDC2A&apos;</span>)
 <span class="hljs-comment">// false</span>
@@ -130,7 +130,7 @@ codePointLength(s) <span class="hljs-comment">// 2</span>
 /[a-z]/iu.test(<span class="hljs-string">&apos;\u212A&apos;</span>) <span class="hljs-comment">// true</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x4E0D;&#x52A0;<code>u</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x5C31;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x975E;&#x89C4;&#x8303;&#x7684;K&#x5B57;&#x7B26;&#x3002;</p>
-<h2 id="t3y &#x4FEE;&#x9970;&#x7B26;">y &#x4FEE;&#x9970;&#x7B26; <a href="#t3y &#x4FEE;&#x9970;&#x7B26;"> # </a></h2>
+<h2 id="t4y &#x4FEE;&#x9970;&#x7B26;">y &#x4FEE;&#x9970;&#x7B26; <a href="#t4y &#x4FEE;&#x9970;&#x7B26;"> # </a></h2>
 <p>&#x9664;&#x4E86;<code>u</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;ES6&#x8FD8;&#x4E3A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6DFB;&#x52A0;&#x4E86;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x53EB;&#x505A;&#x201C;&#x7C98;&#x8FDE;&#x201D;&#xFF08;sticky&#xFF09;&#x4FEE;&#x9970;&#x7B26;&#x3002;</p>
 <p><code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x4F5C;&#x7528;&#x4E0E;<code>g</code>&#x4FEE;&#x9970;&#x7B26;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x5168;&#x5C40;&#x5339;&#x914D;&#xFF0C;&#x540E;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x90FD;&#x4ECE;&#x4E0A;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x3002;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#xFF0C;<code>g</code>&#x4FEE;&#x9970;&#x7B26;&#x53EA;&#x8981;&#x5269;&#x4F59;&#x4F4D;&#x7F6E;&#x4E2D;&#x5B58;&#x5728;&#x5339;&#x914D;&#x5C31;&#x53EF;&#xFF0C;&#x800C;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x786E;&#x4FDD;&#x5339;&#x914D;&#x5FC5;&#x987B;&#x4ECE;&#x5269;&#x4F59;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x662F;&#x201C;&#x7C98;&#x8FDE;&#x201D;&#x7684;&#x6DB5;&#x4E49;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;aaa_aa_a&apos;</span>;
@@ -243,12 +243,12 @@ tokenize(TOKEN_G, <span class="hljs-string">&apos;3x + 4&apos;</span>)
 <span class="hljs-comment">// [ &apos;3&apos;, &apos;+&apos;, &apos;4&apos; ]</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>g</code>&#x4FEE;&#x9970;&#x7B26;&#x4F1A;&#x5FFD;&#x7565;&#x975E;&#x6CD5;&#x5B57;&#x7B26;&#xFF0C;&#x800C;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x4E0D;&#x4F1A;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x53D1;&#x73B0;&#x9519;&#x8BEF;&#x3002;</p>
-<h2 id="t4sticky&#x5C5E;&#x6027;">sticky&#x5C5E;&#x6027; <a href="#t4sticky&#x5C5E;&#x6027;"> # </a></h2>
+<h2 id="t5sticky&#x5C5E;&#x6027;">sticky&#x5C5E;&#x6027; <a href="#t5sticky&#x5C5E;&#x6027;"> # </a></h2>
 <p>&#x4E0E;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x76F8;&#x5339;&#x914D;&#xFF0C;ES6&#x7684;&#x6B63;&#x5219;&#x5BF9;&#x8C61;&#x591A;&#x4E86;<code>sticky</code>&#x5C5E;&#x6027;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x4E86;<code>y</code>&#x4FEE;&#x9970;&#x7B26;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> r = <span class="hljs-regexp">/hello\d/y</span>;
 r.sticky <span class="hljs-comment">// true</span>
 </code></pre>
-<h2 id="t5flags&#x5C5E;&#x6027;">flags&#x5C5E;&#x6027; <a href="#t5flags&#x5C5E;&#x6027;"> # </a></h2>
+<h2 id="t6flags&#x5C5E;&#x6027;">flags&#x5C5E;&#x6027; <a href="#t6flags&#x5C5E;&#x6027;"> # </a></h2>
 <p>ES6&#x4E3A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B0;&#x589E;&#x4E86;<code>flags</code>&#x5C5E;&#x6027;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// ES5&#x7684;source&#x5C5E;&#x6027;</span>
 <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6B63;&#x6587;</span>
@@ -260,7 +260,7 @@ r.sticky <span class="hljs-comment">// true</span>
 /abc/ig.flags
 <span class="hljs-comment">// &apos;gi&apos;</span>
 </code></pre>
-<h2 id="t6RegExp.escape()">RegExp.escape() <a href="#t6RegExp.escape()"> # </a></h2>
+<h2 id="t7RegExp.escape()">RegExp.escape() <a href="#t7RegExp.escape()"> # </a></h2>
 <p>&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x8F6C;&#x4E49;&#xFF0C;&#x624D;&#x80FD;&#x4F5C;&#x4E3A;&#x6B63;&#x5219;&#x6A21;&#x5F0F;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">escapeRegExp</span>(<span class="hljs-params">str</span>) </span>{
   <span class="hljs-keyword">return</span> str.replace(<span class="hljs-regexp">/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g</span>, <span class="hljs-string">&apos;\\$&amp;&apos;</span>);
@@ -291,7 +291,7 @@ assert.equal(<span class="hljs-built_in">String</span>(regex), <span class="hljs
 <span class="hljs-built_in">escape</span>(<span class="hljs-string">&apos;hi. how are you?&apos;</span>);
 <span class="hljs-comment">// &quot;hi\\. how are you\\?&quot;</span>
 </code></pre>
-<h2 id="t7s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F;">s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F; <a href="#t7s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F;"> # </a></h2>
+<h2 id="t8s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F;">s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F; <a href="#t8s &#x4FEE;&#x9970;&#x7B26;&#xFF1A;dotAll &#x6A21;&#x5F0F;"> # </a></h2>
 <p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x70B9;&#xFF08;<code>.</code>&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x7684;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x662F;&#x884C;&#x7EC8;&#x6B62;&#x7B26;&#xFF08;line terminator character&#xFF09;&#x9664;&#x5916;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x5B57;&#x7B26;&#x5C5E;&#x4E8E;&#x201D;&#x884C;&#x7EC8;&#x6B62;&#x7B26;&#x201C;&#x3002;</p>
 <ul>
@@ -321,7 +321,7 @@ re.dotAll <span class="hljs-comment">// true</span>
 re.flags <span class="hljs-comment">// &apos;s&apos;</span>
 </code></pre>
 <p><code>/s</code>&#x4FEE;&#x9970;&#x7B26;&#x548C;&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;<code>/m</code>&#x4E0D;&#x51B2;&#x7A81;&#xFF0C;&#x4E24;&#x8005;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>.</code>&#x5339;&#x914D;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF0C;&#x800C;<code>^</code>&#x548C;<code>$</code>&#x5339;&#x914D;&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x884C;&#x9996;&#x548C;&#x884C;&#x5C3E;&#x3002;</p>
-<h2 id="t8&#x540E;&#x884C;&#x65AD;&#x8A00;">&#x540E;&#x884C;&#x65AD;&#x8A00; <a href="#t8&#x540E;&#x884C;&#x65AD;&#x8A00;"> # </a></h2>
+<h2 id="t9&#x540E;&#x884C;&#x65AD;&#x8A00;">&#x540E;&#x884C;&#x65AD;&#x8A00; <a href="#t9&#x540E;&#x884C;&#x65AD;&#x8A00;"> # </a></h2>
 <p>JavaScript&#x8BED;&#x8A00;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x5148;&#x884C;&#x65AD;&#x8A00;&#xFF08;lookahead&#xFF09;&#x548C;&#x5148;&#x884C;&#x5426;&#x5B9A;&#x65AD;&#x8A00;&#xFF08;negative lookahead&#xFF09;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x540E;&#x884C;&#x65AD;&#x8A00;&#xFF08;lookbehind&#xFF09;&#x548C;&#x540E;&#x884C;&#x5426;&#x5B9A;&#x65AD;&#x8A00;&#xFF08;negative lookbehind&#xFF09;&#x3002;</p>
 <p>&#x76EE;&#x524D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;<a href="https://github.com/goyakin/es-regexp-lookbehind">&#x63D0;&#x6848;</a>&#xFF0C;&#x5728;ES7&#x52A0;&#x5165;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x3002;V8&#x5F15;&#x64CE;4.9&#x7248;&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#xFF0C;Chrome&#x6D4F;&#x89C8;&#x5668;49&#x7248;&#x6253;&#x5F00;&#x201D;experimental JavaScript features&#x201C;&#x5F00;&#x5173;&#xFF08;&#x5730;&#x5740;&#x680F;&#x952E;&#x5165;<code>about:flags</code>&#xFF09;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#x3002;</p>
 <p>&#x201D;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x201C;&#x6307;&#x7684;&#x662F;&#xFF0C;<code>x</code>&#x53EA;&#x6709;&#x5728;<code>y</code>&#x524D;&#x9762;&#x624D;&#x5339;&#x914D;&#xFF0C;&#x5FC5;&#x987B;&#x5199;&#x6210;<code>/x(?=y)/</code>&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x53EA;&#x5339;&#x914D;&#x767E;&#x5206;&#x53F7;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x8981;&#x5199;&#x6210;<code>/\d+(?=%)/</code>&#x3002;&#x201D;&#x5148;&#x884C;&#x5426;&#x5B9A;&#x65AD;&#x8A00;&#x201C;&#x6307;&#x7684;&#x662F;&#xFF0C;<code>x</code>&#x53EA;&#x6709;&#x4E0D;&#x5728;<code>y</code>&#x524D;&#x9762;&#x624D;&#x5339;&#x914D;&#xFF0C;&#x5FC5;&#x987B;&#x5199;&#x6210;<code>/x(?!y)/</code>&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x53EA;&#x5339;&#x914D;&#x4E0D;&#x5728;&#x767E;&#x5206;&#x53F7;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x8981;&#x5199;&#x6210;<code>/\d+(?!%)/</code>&#x3002;</p>
@@ -345,7 +345,7 @@ re.flags <span class="hljs-comment">// &apos;s&apos;</span>
 /(?&lt;=<span class="hljs-value">\1d(o))r</span>/<span class="hljs-attribute">.exec</span>(&apos;<span class="hljs-attribute">hodor</span>&apos;)  // [&quot;<span class="hljs-attribute">r</span>&quot;, &quot;<span class="hljs-attribute">o</span>&quot;]
 </span></span></code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x884C;&#x65AD;&#x8A00;&#x7684;&#x53CD;&#x659C;&#x6760;&#x5F15;&#x7528;&#xFF08;<code>\1</code>&#xFF09;&#x653E;&#x5728;&#x62EC;&#x53F7;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x5F97;&#x5230;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x524D;&#x9762;&#x624D;&#x53EF;&#x4EE5;&#x3002;</p>
-<h2 id="t9Unicode&#x5C5E;&#x6027;&#x7C7B;">Unicode&#x5C5E;&#x6027;&#x7C7B; <a href="#t9Unicode&#x5C5E;&#x6027;&#x7C7B;"> # </a></h2>
+<h2 id="t10Unicode&#x5C5E;&#x6027;&#x7C7B;">Unicode&#x5C5E;&#x6027;&#x7C7B; <a href="#t10Unicode&#x5C5E;&#x6027;&#x7C7B;"> # </a></h2>
 <p>&#x76EE;&#x524D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;<a href="https://github.com/mathiasbynens/es-regexp-unicode-property-escapes">&#x63D0;&#x6848;</a>&#xFF0C;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x7C7B;&#x7684;&#x5199;&#x6CD5;<code>\p{...}</code>&#x548C;<code>\P{...}</code>&#xFF0C;&#x5141;&#x8BB8;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7B26;&#x5408;Unicode&#x67D0;&#x79CD;&#x5C5E;&#x6027;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> regexGreekSymbol = <span class="hljs-regexp">/\p{Script=Greek}/u</span>;
 regexGreekSymbol.test(<span class="hljs-string">&apos;&#x3C0;&apos;</span>) <span class="hljs-comment">// u</span>

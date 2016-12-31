@@ -37,13 +37,13 @@
 <div class="container">
 
     <div class="page-toc">
-        <ul><li><a href="#t0字符的Unicode表示法">字符的Unicode表示法</a></li><li><a href="#t1codePointAt()">codePointAt()</a></li><li><a href="#t2String.fromCodePoint()">String.fromCodePoint()</a></li><li><a href="#t3字符串的遍历器接口">字符串的遍历器接口</a></li><li><a href="#t4at()">at()</a></li><li><a href="#t5normalize()">normalize()</a></li><li><a href="#t6includes(), startsWith(), endsWith()">includes(), startsWith(), endsWith()</a></li><li><a href="#t7repeat()">repeat()</a></li><li><a href="#t8padStart()，padEnd()">padStart()，padEnd()</a></li><li><a href="#t9模板字符串">模板字符串</a></li><li><a href="#t10实例：模板编译">实例：模板编译</a></li><li><a href="#t11标签模板">标签模板</a></li><li><a href="#t12String.raw()">String.raw()</a></li><li><a href="#t13模板字符串的限制">模板字符串的限制</a></li></ul>
+        <ul><li><a href="#t0字符串的扩展">字符串的扩展</a><ul><li><a href="#t1字符的Unicode表示法">字符的Unicode表示法</a></li><li><a href="#t2codePointAt()">codePointAt()</a></li><li><a href="#t3String.fromCodePoint()">String.fromCodePoint()</a></li><li><a href="#t4字符串的遍历器接口">字符串的遍历器接口</a></li><li><a href="#t5at()">at()</a></li><li><a href="#t6normalize()">normalize()</a></li><li><a href="#t7includes(), startsWith(), endsWith()">includes(), startsWith(), endsWith()</a></li><li><a href="#t8repeat()">repeat()</a></li><li><a href="#t9padStart()，padEnd()">padStart()，padEnd()</a></li><li><a href="#t10模板字符串">模板字符串</a></li><li><a href="#t11实例：模板编译">实例：模板编译</a></li><li><a href="#t12标签模板">标签模板</a></li><li><a href="#t13String.raw()">String.raw()</a></li><li><a href="#t14模板字符串的限制">模板字符串的限制</a></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
-        <p>&#xFEFF;# &#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6269;&#x5C55;</p>
+        <h1 id="t0&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6269;&#x5C55;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6269;&#x5C55; <a href="#t0&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6269;&#x5C55;"> # </a></h1>
 <p>ES6&#x52A0;&#x5F3A;&#x4E86;&#x5BF9;Unicode&#x7684;&#x652F;&#x6301;&#xFF0C;&#x5E76;&#x4E14;&#x6269;&#x5C55;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x3002;</p>
-<h2 id="t0&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5;">&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5; <a href="#t0&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5;"> # </a></h2>
+<h2 id="t1&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5;">&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5; <a href="#t1&#x5B57;&#x7B26;&#x7684;Unicode&#x8868;&#x793A;&#x6CD5;"> # </a></h2>
 <p>JavaScript&#x5141;&#x8BB8;&#x91C7;&#x7528;<code>\uxxxx</code>&#x5F62;&#x5F0F;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4E2D;&#x201C;xxxx&#x201D;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x7684;&#x7801;&#x70B9;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&quot;\u0061&quot;</span>
 <span class="hljs-comment">// &quot;a&quot;</span>
@@ -77,7 +77,7 @@ hell\u{<span class="hljs-number">6</span>F} <span class="hljs-comment">// 123</s
 <span class="hljs-string">&apos;\u007A&apos;</span> === <span class="hljs-string">&apos;z&apos;</span> <span class="hljs-comment">// true</span>
 <span class="hljs-string">&apos;\u{7A}&apos;</span> === <span class="hljs-string">&apos;z&apos;</span> <span class="hljs-comment">// true</span>
 </code></pre>
-<h2 id="t1codePointAt()">codePointAt() <a href="#t1codePointAt()"> # </a></h2>
+<h2 id="t2codePointAt()">codePointAt() <a href="#t2codePointAt()"> # </a></h2>
 <p>JavaScript&#x5185;&#x90E8;&#xFF0C;&#x5B57;&#x7B26;&#x4EE5;UTF-16&#x7684;&#x683C;&#x5F0F;&#x50A8;&#x5B58;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x56FA;&#x5B9A;&#x4E3A;<code>2</code>&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x9700;&#x8981;<code>4</code>&#x4E2A;&#x5B57;&#x8282;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#xFF08;Unicode&#x7801;&#x70B9;&#x5927;&#x4E8E;<code>0xFFFF</code>&#x7684;&#x5B57;&#x7B26;&#xFF09;&#xFF0C;JavaScript&#x4F1A;&#x8BA4;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;&#x20BB7;&quot;</span>;
 
@@ -120,7 +120,7 @@ s.codePointAt(<span class="hljs-number">2</span>).toString(<span class="hljs-num
 is32Bit(<span class="hljs-string">&quot;&#x20BB7;&quot;</span>) <span class="hljs-comment">// true</span>
 is32Bit(<span class="hljs-string">&quot;a&quot;</span>) <span class="hljs-comment">// false</span>
 </code></pre>
-<h2 id="t2String.fromCodePoint()">String.fromCodePoint() <a href="#t2String.fromCodePoint()"> # </a></h2>
+<h2 id="t3String.fromCodePoint()">String.fromCodePoint() <a href="#t3String.fromCodePoint()"> # </a></h2>
 <p>ES5&#x63D0;&#x4F9B;<code>String.fromCharCode</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x4ECE;&#x7801;&#x70B9;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x8BC6;&#x522B;32&#x4F4D;&#x7684;UTF-16&#x5B57;&#x7B26;&#xFF08;Unicode&#x7F16;&#x53F7;&#x5927;&#x4E8E;<code>0xFFFF</code>&#xFF09;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-built_in">String</span>.fromCharCode(<span class="hljs-number">0x20BB7</span>)
 <span class="hljs-comment">// &quot;&#xBB7;&quot;</span>
@@ -134,7 +134,7 @@ is32Bit(<span class="hljs-string">&quot;a&quot;</span>) <span class="hljs-commen
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;<code>String.fromCodePoint</code>&#x65B9;&#x6CD5;&#x6709;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FD4;&#x56DE;&#x3002;</p>
 <p>&#x6CE8;&#x610F;&#xFF0C;<code>fromCodePoint</code>&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x5728;<code>String</code>&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x800C;<code>codePointAt</code>&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p>
-<h2 id="t3&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3; <a href="#t3&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3;"> # </a></h2>
+<h2 id="t4&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3;">&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3; <a href="#t4&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3;"> # </a></h2>
 <p>ES6&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x6DFB;&#x52A0;&#x4E86;&#x904D;&#x5386;&#x5668;&#x63A5;&#x53E3;&#xFF08;&#x8BE6;&#x89C1;&#x300A;Iterator&#x300B;&#x4E00;&#x7AE0;&#xFF09;&#xFF0C;&#x4F7F;&#x5F97;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x88AB;<code>for...of</code>&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> codePoint <span class="hljs-keyword">of</span> <span class="hljs-string">&apos;foo&apos;</span>) {
   <span class="hljs-built_in">console</span>.log(codePoint)
@@ -158,7 +158,7 @@ is32Bit(<span class="hljs-string">&quot;a&quot;</span>) <span class="hljs-commen
 <span class="hljs-comment">// &quot;&#x20BB7;&quot;</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;<code>text</code>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x662F;<code>for</code>&#x5FAA;&#x73AF;&#x4F1A;&#x8BA4;&#x4E3A;&#x5B83;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#xFF08;&#x90FD;&#x4E0D;&#x53EF;&#x6253;&#x5370;&#xFF09;&#xFF0C;&#x800C;<code>for...of</code>&#x5FAA;&#x73AF;&#x4F1A;&#x6B63;&#x786E;&#x8BC6;&#x522B;&#x51FA;&#x8FD9;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
-<h2 id="t4at()">at() <a href="#t4at()"> # </a></h2>
+<h2 id="t5at()">at() <a href="#t5at()"> # </a></h2>
 <p>ES5&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;<code>charAt</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x7ED9;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x7801;&#x70B9;&#x5927;&#x4E8E;<code>0xFFFF</code>&#x7684;&#x5B57;&#x7B26;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;abc&apos;</span>.charAt(<span class="hljs-number">0</span>) <span class="hljs-comment">// &quot;a&quot;</span>
 <span class="hljs-string">&apos;&#x20BB7;&apos;</span>.charAt(<span class="hljs-number">0</span>) <span class="hljs-comment">// &quot;\uD842&quot;</span>
@@ -169,7 +169,7 @@ is32Bit(<span class="hljs-string">&quot;a&quot;</span>) <span class="hljs-commen
 <span class="hljs-string">&apos;&#x20BB7;&apos;</span>.at(<span class="hljs-number">0</span>) <span class="hljs-comment">// &quot;&#x20BB7;&quot;</span>
 </code></pre>
 <p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<a href="https://github.com/es-shims/String.prototype.at">&#x57AB;&#x7247;&#x5E93;</a>&#x5B9E;&#x73B0;&#x3002;</p>
-<h2 id="t5normalize()">normalize() <a href="#t5normalize()"> # </a></h2>
+<h2 id="t6normalize()">normalize() <a href="#t6normalize()"> # </a></h2>
 <p>&#x8BB8;&#x591A;&#x6B27;&#x6D32;&#x8BED;&#x8A00;&#x6709;&#x8BED;&#x8C03;&#x7B26;&#x53F7;&#x548C;&#x91CD;&#x97F3;&#x7B26;&#x53F7;&#x3002;&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x5B83;&#x4EEC;&#xFF0C;Unicode&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x79CD;&#x662F;&#x76F4;&#x63A5;&#x63D0;&#x4F9B;&#x5E26;&#x91CD;&#x97F3;&#x7B26;&#x53F7;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;<code>&#x1D1;</code>&#xFF08;\u01D1&#xFF09;&#x3002;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x63D0;&#x4F9B;&#x5408;&#x6210;&#x7B26;&#x53F7;&#xFF08;combining character&#xFF09;&#xFF0C;&#x5373;&#x539F;&#x5B57;&#x7B26;&#x4E0E;&#x91CD;&#x97F3;&#x7B26;&#x53F7;&#x7684;&#x5408;&#x6210;&#xFF0C;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;<code>O</code>&#xFF08;\u004F&#xFF09;&#x548C;<code>&#x2C7;</code>&#xFF08;\u030C&#xFF09;&#x5408;&#x6210;<code>&#x1D1;</code>&#xFF08;\u004F\u030C&#xFF09;&#x3002;</p>
 <p>&#x8FD9;&#x4E24;&#x79CD;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x89C6;&#x89C9;&#x548C;&#x8BED;&#x4E49;&#x4E0A;&#x90FD;&#x7B49;&#x4EF7;&#xFF0C;&#x4F46;&#x662F;JavaScript&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;\u01D1&apos;</span>===<span class="hljs-string">&apos;\u004F\u030C&apos;</span> <span class="hljs-comment">//false</span>
@@ -194,7 +194,7 @@ is32Bit(<span class="hljs-string">&quot;a&quot;</span>) <span class="hljs-commen
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8868;&#x793A;&#xFF0C;<code>NFC</code>&#x53C2;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x7684;&#x5408;&#x6210;&#x5F62;&#x5F0F;&#xFF0C;<code>NFD</code>&#x53C2;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x7684;&#x5206;&#x89E3;&#x5F62;&#x5F0F;&#x3002;</p>
 <p>&#x4E0D;&#x8FC7;&#xFF0C;<code>normalize</code>&#x65B9;&#x6CD5;&#x76EE;&#x524D;&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x4E09;&#x4E2A;&#x6216;&#x4E09;&#x4E2A;&#x4EE5;&#x4E0A;&#x5B57;&#x7B26;&#x7684;&#x5408;&#x6210;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD8;&#x662F;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;Unicode&#x7F16;&#x53F7;&#x533A;&#x95F4;&#x5224;&#x65AD;&#x3002;</p>
-<h2 id="t6includes(), startsWith(), endsWith()">includes(), startsWith(), endsWith() <a href="#t6includes(), startsWith(), endsWith()"> # </a></h2>
+<h2 id="t7includes(), startsWith(), endsWith()">includes(), startsWith(), endsWith() <a href="#t7includes(), startsWith(), endsWith()"> # </a></h2>
 <p>&#x4F20;&#x7EDF;&#x4E0A;&#xFF0C;JavaScript&#x53EA;&#x6709;<code>indexOf</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x3002;ES6&#x53C8;&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x79CD;&#x65B0;&#x65B9;&#x6CD5;&#x3002;</p>
 <ul>
 <li><strong>includes()</strong>&#xFF1A;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x5426;&#x627E;&#x5230;&#x4E86;&#x53C2;&#x6570;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
@@ -215,7 +215,7 @@ s.endsWith(<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs
 s.includes(<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// false</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8868;&#x793A;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;<code>n</code>&#x65F6;&#xFF0C;<code>endsWith</code>&#x7684;&#x884C;&#x4E3A;&#x4E0E;&#x5176;&#x4ED6;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x5B83;&#x9488;&#x5BF9;&#x524D;<code>n</code>&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x9488;&#x5BF9;&#x4ECE;&#x7B2C;<code>n</code>&#x4E2A;&#x4F4D;&#x7F6E;&#x76F4;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x7ED3;&#x675F;&#x3002;</p>
-<h2 id="t7repeat()">repeat() <a href="#t7repeat()"> # </a></h2>
+<h2 id="t8repeat()">repeat() <a href="#t8repeat()"> # </a></h2>
 <p><code>repeat</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x5C06;&#x539F;&#x5B57;&#x7B26;&#x4E32;&#x91CD;&#x590D;<code>n</code>&#x6B21;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;x&apos;</span>.repeat(<span class="hljs-number">3</span>) <span class="hljs-comment">// &quot;xxx&quot;</span>
 <span class="hljs-string">&apos;hello&apos;</span>.repeat(<span class="hljs-number">2</span>) <span class="hljs-comment">// &quot;hellohello&quot;</span>
@@ -240,7 +240,7 @@ s.includes(<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;na&apos;</span>.repeat(<span class="hljs-string">&apos;na&apos;</span>) <span class="hljs-comment">// &quot;&quot;</span>
 <span class="hljs-string">&apos;na&apos;</span>.repeat(<span class="hljs-string">&apos;3&apos;</span>) <span class="hljs-comment">// &quot;nanana&quot;</span>
 </code></pre>
-<h2 id="t8padStart()&#xFF0C;padEnd()">padStart()&#xFF0C;padEnd() <a href="#t8padStart()&#xFF0C;padEnd()"> # </a></h2>
+<h2 id="t9padStart()&#xFF0C;padEnd()">padStart()&#xFF0C;padEnd() <a href="#t9padStart()&#xFF0C;padEnd()"> # </a></h2>
 <p>ES7&#x63A8;&#x51FA;&#x4E86;&#x5B57;&#x7B26;&#x4E32;&#x8865;&#x5168;&#x957F;&#x5EA6;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x591F;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#xFF0C;&#x4F1A;&#x5728;&#x5934;&#x90E8;&#x6216;&#x5C3E;&#x90E8;&#x8865;&#x5168;&#x3002;<code>padStart</code>&#x7528;&#x4E8E;&#x5934;&#x90E8;&#x8865;&#x5168;&#xFF0C;<code>padEnd</code>&#x7528;&#x4E8E;&#x5C3E;&#x90E8;&#x8865;&#x5168;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;x&apos;</span>.padStart(<span class="hljs-number">5</span>, <span class="hljs-string">&apos;ab&apos;</span>) <span class="hljs-comment">// &apos;ababx&apos;</span>
 <span class="hljs-string">&apos;x&apos;</span>.padStart(<span class="hljs-number">4</span>, <span class="hljs-string">&apos;ab&apos;</span>) <span class="hljs-comment">// &apos;abax&apos;</span>
@@ -270,7 +270,7 @@ s.includes(<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs
 <pre><code class="lang-javascript"><span class="hljs-string">&apos;12&apos;</span>.padStart(<span class="hljs-number">10</span>, <span class="hljs-string">&apos;YYYY-MM-DD&apos;</span>) <span class="hljs-comment">// &quot;YYYY-MM-12&quot;</span>
 <span class="hljs-string">&apos;09-12&apos;</span>.padStart(<span class="hljs-number">10</span>, <span class="hljs-string">&apos;YYYY-MM-DD&apos;</span>) <span class="hljs-comment">// &quot;YYYY-09-12&quot;</span>
 </code></pre>
-<h2 id="t9&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32; <a href="#t9&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;"> # </a></h2>
+<h2 id="t10&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32; <a href="#t10&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;"> # </a></h2>
 <p>&#x4F20;&#x7EDF;&#x7684;JavaScript&#x8BED;&#x8A00;&#xFF0C;&#x8F93;&#x51FA;&#x6A21;&#x677F;&#x901A;&#x5E38;&#x662F;&#x8FD9;&#x6837;&#x5199;&#x7684;&#x3002;</p>
 <pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#result&apos;</span>).append(
   <span class="hljs-string">&apos;There are &lt;b&gt;&apos;</span> + basket.count + <span class="hljs-string">&apos;&lt;/b&gt; &apos;</span> +
@@ -404,7 +404,7 @@ func(<span class="hljs-string">&apos;Jack&apos;</span>) <span class="hljs-commen
 <span class="hljs-keyword">let</span> func = <span class="hljs-built_in">eval</span>.call(<span class="hljs-literal">null</span>, str);
 func(<span class="hljs-string">&apos;Jack&apos;</span>) <span class="hljs-comment">// &quot;Hello Jack!&quot;</span>
 </code></pre>
-<h2 id="t10&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1;">&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1; <a href="#t10&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1;"> # </a></h2>
+<h2 id="t11&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1;">&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1; <a href="#t11&#x5B9E;&#x4F8B;&#xFF1A;&#x6A21;&#x677F;&#x7F16;&#x8BD1;"> # </a></h2>
 <p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x751F;&#x6210;&#x6B63;&#x5F0F;&#x6A21;&#x677F;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> template = <span class="hljs-string">`
 &lt;ul&gt;
@@ -487,7 +487,7 @@ div.innerHTML = parse({ supplies: [ <span class="hljs-string">&quot;broom&quot;<
 <span class="hljs-comment">//     &lt;li&gt;cleaner&lt;/li&gt;</span>
 <span class="hljs-comment">//   &lt;/ul&gt;</span>
 </code></pre>
-<h2 id="t11&#x6807;&#x7B7E;&#x6A21;&#x677F;">&#x6807;&#x7B7E;&#x6A21;&#x677F; <a href="#t11&#x6807;&#x7B7E;&#x6A21;&#x677F;"> # </a></h2>
+<h2 id="t12&#x6807;&#x7B7E;&#x6A21;&#x677F;">&#x6807;&#x7B7E;&#x6A21;&#x677F; <a href="#t12&#x6807;&#x7B7E;&#x6A21;&#x677F;"> # </a></h2>
 <p>&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x7D27;&#x8DDF;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x540D;&#x540E;&#x9762;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x88AB;&#x8C03;&#x7528;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x6807;&#x7B7E;&#x6A21;&#x677F;&#x201D;&#x529F;&#x80FD;&#xFF08;tagged template&#xFF09;&#x3002;</p>
 <pre><code class="lang-javascript">alert<span class="hljs-string">`123`</span>
 <span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
@@ -657,7 +657,7 @@ HelloWorldApp.main();
 }
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>tag</code>&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>strings</code>&#xFF0C;&#x6709;&#x4E00;&#x4E2A;<code>raw</code>&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x3002;&#x8BE5;&#x6570;&#x7EC4;&#x7684;&#x6210;&#x5458;&#x4E0E;<code>strings</code>&#x6570;&#x7EC4;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>strings</code>&#x6570;&#x7EC4;&#x662F;<code>[&quot;First line\nSecond line&quot;]</code>&#xFF0C;&#x90A3;&#x4E48;<code>strings.raw</code>&#x6570;&#x7EC4;&#x5C31;&#x662F;<code>[&quot;First line\\nSecond line&quot;]</code>&#x3002;&#x4E24;&#x8005;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x9762;&#x7684;&#x659C;&#x6760;&#x90FD;&#x88AB;&#x8F6C;&#x4E49;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#xFF0C;strings.raw&#x6570;&#x7EC4;&#x4F1A;&#x5C06;<code>\n</code>&#x89C6;&#x4E3A;<code>\\</code>&#x548C;<code>n</code>&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6362;&#x884C;&#x7B26;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x53D6;&#x5F97;&#x8F6C;&#x4E49;&#x4E4B;&#x524D;&#x7684;&#x539F;&#x59CB;&#x6A21;&#x677F;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#x3002;</p>
-<h2 id="t12String.raw()">String.raw() <a href="#t12String.raw()"> # </a></h2>
+<h2 id="t13String.raw()">String.raw() <a href="#t13String.raw()"> # </a></h2>
 <p>ES6&#x8FD8;&#x4E3A;&#x539F;&#x751F;&#x7684;String&#x5BF9;&#x8C61;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<code>raw</code>&#x65B9;&#x6CD5;&#x3002;</p>
 <p><code>String.raw</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5F80;&#x5F80;&#x7528;&#x6765;&#x5145;&#x5F53;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x659C;&#x6760;&#x90FD;&#x88AB;&#x8F6C;&#x4E49;&#xFF08;&#x5373;&#x659C;&#x6760;&#x524D;&#x9762;&#x518D;&#x52A0;&#x4E00;&#x4E2A;&#x659C;&#x6760;&#xFF09;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;&#x66FF;&#x6362;&#x53D8;&#x91CF;&#x540E;&#x7684;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-built_in">String</span>.raw<span class="hljs-string">`Hi\n<span class="hljs-subst">${2+3}</span>!`</span>;
@@ -689,7 +689,7 @@ HelloWorldApp.main();
 <span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
 <span class="hljs-built_in">String</span>.raw({ raw: [<span class="hljs-string">&apos;t&apos;</span>,<span class="hljs-string">&apos;e&apos;</span>,<span class="hljs-string">&apos;s&apos;</span>,<span class="hljs-string">&apos;t&apos;</span>] }, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
 </code></pre>
-<h2 id="t13&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236; <a href="#t13&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236;"> # </a></h2>
+<h2 id="t14&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236; <a href="#t14&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9650;&#x5236;"> # </a></h2>
 <p>&#x524D;&#x9762;&#x63D0;&#x5230;&#x6807;&#x7B7E;&#x6A21;&#x677F;&#x91CC;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5185;&#x5D4C;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#x9ED8;&#x8BA4;&#x4F1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E49;&#xFF0C;&#x56E0;&#x6B64;&#x5BFC;&#x81F4;&#x4E86;&#x65E0;&#x6CD5;&#x5D4C;&#x5165;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x3002;</p>
 <p>&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5728;&#x6807;&#x7B7E;&#x6A21;&#x677F;&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x5D4C;&#x5165;Latex&#x8BED;&#x8A00;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">latex</span>(<span class="hljs-params">strings</span>) </span>{
