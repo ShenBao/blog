@@ -107,6 +107,15 @@
                             "11  Performance API.md",
                             "12  mobile移动设备API.md"
                         ]
+                    },
+                    {
+                        "07  jQuery": [
+                            "basic.md",
+                            "deferred.md",
+                            "jquery-free.md",
+                            "plugin.md",
+                            "utility.md"
+                        ]
                     }
                 ]
             },
