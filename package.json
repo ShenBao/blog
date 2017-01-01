@@ -86,10 +86,7 @@
                             "05  JavaScript与有限状态机.md",
                             "06  JavaScript解释器.md",
                             "07  MVC框架与Backbone.js.md",
-                            "08  ECMAScript 6 介绍.md",
-                            "backbonejs.md",
-                            "ecmascript6.md",
-                            "interpreter.md"
+                            "08  ECMAScript 6 介绍.md"
                         ]
                     },
                     {
@@ -124,18 +121,19 @@
                     },
                     {
                         "07  jQuery": [
-                            "basic.md",
-                            "deferred.md",
-                            "jquery-free.md",
-                            "plugin.md",
-                            "utility.md"
+                            "01  jQuery概述.md",
+                            "02  jQuery常用API.md",
+                            "03  jQuery工具方法.md",
+                            "04  jQuery插件开发.md",
+                            "05  jQuery.Deferred对象.md",
+                            "06  如何做到jQuery-free.md"
                         ]
                     },
                     {
                         "08  webapp": [
-                            "cache.md",
-                            "progressive.md",
-                            "serviceworker.md"
+                            "01  cache.md",
+                            "02  progressive.md",
+                            "03  serviceworker.md"
                         ]
                     },
                     {
@@ -150,15 +148,15 @@
                     },
                     {
                         "10  tool 工具": [
-                            "bower.md",
-                            "browserify.md",
-                            "grunt.md",
-                            "gulp.md",
-                            "lint.md",
-                            "phantomjs.md",
-                            "requirejs.md",
-                            "sourcemap.md",
-                            "testing.md"
+                            "Bower：客户端库管理工具.md",
+                            "Browserify：浏览器加载Node.js模块.md",
+                            "Grunt：任务自动管理工具.md",
+                            "Gulp：任务自动管理工具.md",
+                            "JavaScript 程序测试.md",
+                            "Lint 工具.md",
+                            "PhantomJS.md",
+                            "RequireJS和AMD规范.md",
+                            "Source Map.md"
                         ]
                     }
                 ]

@@ -1,10 +1,6 @@
----
-title: Underscore.js
-layout: page
-category: library
-date: 2012-12-27
-modifiedOn: 2013-10-24
----
+
+# Underscore.js
+
 
 ## 概述
 

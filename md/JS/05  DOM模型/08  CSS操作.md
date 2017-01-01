@@ -1,10 +1,6 @@
----
-title: CSS操作
-layout: page
-category: dom
-date: 2013-07-05
-modifiedOn: 2014-01-31
----
+
+#   CSS操作
+
 
 CSS与JavaScript是两个有着明确分工的领域，前者负责页面的视觉效果，后者负责与用户的行为互动。但是，它们毕竟同属网页开发的前端，因此不可避免有着交叉和互相配合。本节介绍如果通过JavaScript操作CSS。
 

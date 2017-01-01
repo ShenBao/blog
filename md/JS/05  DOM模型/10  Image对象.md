@@ -1,10 +1,6 @@
----
-title: Image对象
-category: dom
-layout: page
-date: 2016-09-04
-modifiedOn: 2016-09-04
----
+
+#   Image对象
+
 
 ## 概述
 

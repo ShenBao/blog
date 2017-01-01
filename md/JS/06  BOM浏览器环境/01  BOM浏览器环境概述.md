@@ -1,10 +1,6 @@
----
-title: 浏览器环境概述
-layout: page
-category: bom
-date: 2013-03-10
-modifiedOn: 2013-12-22
----
+
+#   浏览器环境概述
+
 
 ## JavaScript代码嵌入网页的方法
 

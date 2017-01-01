@@ -1,10 +1,6 @@
----
-title: 排序算法
-date: 2012-12-02
-category: library
-layout: page
-modifiedOn: 2013-01-30
----
+
+# 排序算法
+
 
 排序算法是将一系列的值按照顺序进行排列的方法。
 

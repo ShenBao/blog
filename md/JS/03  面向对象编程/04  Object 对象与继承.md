@@ -1,10 +1,6 @@
----
-title: Object 对象与继承
-layout: page
-date: 2012-12-12
-modifiedOn: 2013-05-04
-category: oop
----
+
+#   Object 对象与继承
+
 
 通过原型链，对象的属性分成两种：自身的属性和继承的属性。JavaScript 语言在`Object`对象上面，提供了很多相关方法，来处理这两种不同的属性。
 

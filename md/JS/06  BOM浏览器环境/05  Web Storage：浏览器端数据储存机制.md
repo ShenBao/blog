@@ -1,10 +1,6 @@
----
-title: Web Storage：浏览器端数据储存机制
-layout: page
-category: bom
-date: 2012-12-28
-modifiedOn: 2013-12-16
----
+
+#   Web Storage：浏览器端数据储存机制
+
 
 ## 概述
 

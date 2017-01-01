@@ -1,10 +1,6 @@
----
-title: Datejs
-layout: page
-category: library
-date: 2013-03-09
-modifiedOn: 2013-03-09
----
+
+# Datejs
+
 
 ## 概述
 

@@ -1,10 +1,6 @@
----
-title: Date对象
-layout: page
-category: stdlib
-date: 2013-09-03
-modifiedOn: 2014-01-05
----
+
+#   Date对象
+
 
 ## 概述
 

@@ -1,10 +1,6 @@
----
-title: RegExp对象
-layout: page
-category: stdlib
-date: 2013-01-17
-modifiedOn: 2014-01-06
----
+
+#   RegExp对象
+
 
 ## 概述
 

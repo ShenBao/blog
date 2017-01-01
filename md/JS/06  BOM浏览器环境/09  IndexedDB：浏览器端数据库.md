@@ -1,10 +1,6 @@
----
-title: IndexedDB：浏览器端数据库
-layout: page
-category: bom
-date: 2013-10-07
-modifiedOn: 2013-11-09
----
+
+#  IndexedDB：浏览器端数据库
+
 
 ## 概述
 

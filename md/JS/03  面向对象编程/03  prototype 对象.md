@@ -1,10 +1,6 @@
----
-title: prototype 对象
-layout: page
-category: oop
-date: 2012-12-14
-modifiedOn: 2013-11-23
----
+
+#   prototype 对象
+
 
 大部分面向对象的编程语言，都是以“类”（class）作为对象体系的语法基础。JavaScript语言不是如此，它的面向对象编程基于“原型对象”。
 

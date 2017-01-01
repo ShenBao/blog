@@ -1,10 +1,7 @@
----
-title: Web Worker
-layout: page
-category: htmlapi
-date: 2013-01-25
-modifiedOn: 2013-08-10
----
+
+
+# Web Worker
+
 
 ## 概述
 

@@ -1,10 +1,6 @@
----
-title: 函数
-layout: page
-category: grammar
-date: 2012-12-15
-modifiedOn: 2013-12-19
----
+
+#   函数
+
 
 ## 概述
 

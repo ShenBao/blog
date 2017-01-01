@@ -1,10 +1,6 @@
----
-title: document节点
-layout: page
-category: dom
-date: 2014-05-18
-modifiedOn: 2014-05-18
----
+
+#   document节点
+
 
 ## 概述
 

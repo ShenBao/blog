@@ -1,10 +1,6 @@
----
-title: WebRTC
-layout: page
-category: bom
-date: 2013-01-10
-modifiedOn: 2013-10-04
----
+
+# WebRTC
+
 
 ## 概述
 

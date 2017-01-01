@@ -1,10 +1,6 @@
----
-title: Web Notifications API
-layout: page
-category: bom
-date: 2014-05-06
-modifiedOn: 2014-05-06
----
+
+#   Web Notifications API
+
 
 ## 概述
 

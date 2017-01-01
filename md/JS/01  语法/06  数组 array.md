@@ -1,10 +1,6 @@
----
-title: 数组
-date: 2012-12-11
-category: grammar
-layout: page
-modifiedOn: 2013-11-24
----
+
+#  数组
+
 
 ## 数组的定义
 

@@ -1,10 +1,6 @@
----
-title: 数据类型转换
-layout: page
-category: grammar
-date: 2013-04-13
-modifiedOn: 2013-12-05
----
+
+#  数据类型转换
+
 
 JavaScript是一种动态类型语言，变量没有类型限制，可以随时赋予任意值。
 

@@ -1,10 +1,6 @@
----
-title: DOM 模型概述
-layout: page
-category: dom
-date: 2013-10-07
-modifiedOn: 2014-05-18
----
+
+#  DOM 模型概述
+
 
 ## 基本概念
 

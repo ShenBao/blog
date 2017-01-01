@@ -1,10 +1,6 @@
----
-title: Canvas API
-layout: page
-date: 2012-11-21
-category: htmlapi
-modifiedOn: 2013-06-10
----
+
+# Canvas API
+
 
 ## 概述
 

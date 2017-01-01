@@ -1,10 +1,6 @@
----
-title: Modernizr
-category: library
-layout: page
-date: 2013-03-02
-modifiedOn: 2013-03-02
----
+
+# Modernizr
+
 
 ## 概述
 

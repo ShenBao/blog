@@ -1,10 +1,6 @@
----
-title: Element对象
-category: dom
-layout: page
-date: 2015-04-15
-modifiedOn: 2015-04-15
----
+
+#   Element对象
+
 
 `Element`对象对应网页的HTML标签元素。每一个HTML标签元素，在DOM树上都会转化成一个`Element`节点对象（以下简称元素节点）。
 

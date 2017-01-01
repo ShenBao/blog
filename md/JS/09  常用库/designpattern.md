@@ -1,10 +1,6 @@
----
-title: 设计模式
-category: library
-layout: page
-date: 2013-02-04
-modifiedOn: 2013-02-04
----
+
+# 设计模式
+
 
 "设计模式"（Design Pattern）是针对编程中经常出现的、具有共性的问题，所提出的解决方法。著名的《设计模式》一书一共提出了23种模式。
 

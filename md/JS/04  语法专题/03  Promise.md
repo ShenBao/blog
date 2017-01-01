@@ -1,10 +1,6 @@
----
-title: Promise对象
-layout: page
-category: advanced
-date: 2012-12-22
-modifiedOn: 2013-11-28
----
+
+#   Promise对象
+
 
 Promise是JavaScript异步操作解决方案。介绍Promise之前，先对异步操作做一个详细介绍。
 

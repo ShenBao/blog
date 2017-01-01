@@ -1,10 +1,6 @@
----
-title: String对象
-layout: page
-category: stdlib
-date: 2013-04-30
-modifiedOn: 2014-01-01
----
+
+#   String对象
+
 
 ## 概述
 

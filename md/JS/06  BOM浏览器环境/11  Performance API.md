@@ -1,10 +1,6 @@
----
-title: Performance API
-category: bom
-layout: page
-date: 2013-09-26
-modifiedOn: 2013-09-27
----
+
+#   Performance API
+
 
 Performance API用于精确度量、控制、增强浏览器的性能表现。这个API为测量网站性能，提供以前没有办法做到的精度。
 

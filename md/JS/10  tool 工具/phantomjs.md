@@ -1,10 +1,6 @@
----
-layout: page
-title: PhantomJS
-date: 2012-12-08
-category: tool
-modifiedOn: 2013-08-07
----
+
+# PhantomJS
+
 
 ## 概述
 

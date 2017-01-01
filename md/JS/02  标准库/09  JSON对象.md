@@ -1,10 +1,6 @@
----
-title: JSON对象
-layout: page
-category: stdlib
-date: 2013-01-11
-modifiedOn: 2013-10-01
----
+
+#   JSON对象
+
 
 ## JSON格式
 

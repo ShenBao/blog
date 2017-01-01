@@ -1,10 +1,5 @@
----
-title: 字符串
-layout: page
-category: grammar
-date: 2013-12-31
-modifiedOn: 2014-01-05
----
+
+#   字符串
 
 ## 概述
 

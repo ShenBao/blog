@@ -1,10 +1,6 @@
----
-title: 移动设备API
-layout: page
-category: bom
-date: 2012-12-29
-modifiedOn: 2013-12-20
----
+
+#   移动设备API
+
 
 为了更好地为移动设备服务，HTML 5推出了一系列针对移动设备的API。
 

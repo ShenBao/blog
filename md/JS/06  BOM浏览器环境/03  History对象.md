@@ -1,10 +1,6 @@
----
-title: history对象
-layout: page
-category: bom
-date: 2012-12-22
-modifiedOn: 2014-05-06
----
+
+#   history对象
+
 
 ## 概述
 
