@@ -122,6 +122,45 @@
                             "11  Performance API.md",
                             "12  mobile移动设备API.md"
                         ]
+                    },
+                    {
+                        "07  jQuery": [
+                            "basic.md",
+                            "deferred.md",
+                            "jquery-free.md",
+                            "plugin.md",
+                            "utility.md"
+                        ]
+                    },
+                    {
+                        "08  webapp": [
+                            "cache.md",
+                            "progressive.md",
+                            "serviceworker.md"
+                        ]
+                    },
+                    {
+                        "09  常用库": [
+                            "d3.md",
+                            "datejs.md",
+                            "designpattern.md",
+                            "modernizr.md",
+                            "sorting.md",
+                            "underscore.md"
+                        ]
+                    },
+                    {
+                        "10  tool 工具": [
+                            "bower.md",
+                            "browserify.md",
+                            "grunt.md",
+                            "gulp.md",
+                            "lint.md",
+                            "phantomjs.md",
+                            "requirejs.md",
+                            "sourcemap.md",
+                            "testing.md"
+                        ]
                     }
                 ]
             },
