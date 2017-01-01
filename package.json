@@ -18,7 +18,20 @@
             "首页.md",
             {
                 "HTML": [
-                    "HTML.md"
+                    "01  概述.md",
+                    "02  Canvas.md",
+                    "03  SVG图像.md",
+                    "04  表单form.md",
+                    "05  file文件与二进制数据的操作.md",
+                    "06  Web Worker.md",
+                    "07  SSE：服务器发送事件 eventsource.md",
+                    "08  Page Visiblity.md",
+                    "09  FullScreen API：全屏操作.md",
+                    "10  Web Speech.md",
+                    "11  requestAnimationFrame.md",
+                    "12  WebSocket.md",
+                    "13  WebRTC.md",
+                    "14  Web Components.md"
                 ]
             },
             {
