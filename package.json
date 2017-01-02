@@ -144,7 +144,9 @@
                             "modernizr.md",
                             "sorting.md",
                             "underscore.md",
-                            "Backbone.js.md"
+                            "Backbone.js.md",
+                            "api.md",
+                            "plugins.md"
                         ]
                     },
                     {
@@ -180,6 +182,33 @@
             },
             {
                 "Node": [
+                    "assert.md",
+                    "basic.md",
+                    "buffer.md",
+                    "child-process.md",
+                    "cluster.md",
+                    "develop.md",
+                    "dns.md",
+                    "error.md",
+                    "events.md",
+                    "express.md",
+                    "fs.md",
+                    "http.md",
+                    "koa.md",
+                    "module.md",
+                    "mongodb.md",
+                    "net.md",
+                    "npm.md",
+                    "os.md",
+                    "packagejson.md",
+                    "path.md",
+                    "process.md",
+                    "querystring.md",
+                    "repl.md",
+                    "stream.md",
+                    "timer.md",
+                    "url.md",
+                    "version.md",
                     {
                         "测试工具": [
                             "chai.md",
