@@ -218,33 +218,3 @@ console.log(i); // 5
 上面代码中，变量i只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量。
 
 
-### ES6的块级作用域
-
-`let`实际上为JavaScript新增了块级作用域。
-
-```javascript
-function f1() {
-  let n = 5;
-  if (true) {
-    let n = 10;
-  }
-  console.log(n); // 5
-}
-```
-
-上面的函数有两个代码块，都声明了变量`n`，运行后输出5。这表示外层代码块不受内层代码块的影响。如果使用`var`定义变量`n`，最后输出的值就是10。
-
-ES6允许块级作用域的任意嵌套。
-
-```javascript
-{{{{{let insane = 'Hello World'}}}}};
-```
-
-上面代码使用了一个五层的块级作用域。外层作用域无法读取内层作用域的变量。
-
-```javascript
-{{{{
-  {let insane = 'Hello World'}
-  console.log(insane); // 报错
-}}}};
-```
