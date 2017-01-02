@@ -143,7 +143,8 @@
                             "designpattern.md",
                             "modernizr.md",
                             "sorting.md",
-                            "underscore.md"
+                            "underscore.md",
+                            "Backbone.js.md"
                         ]
                     },
                     {
@@ -179,14 +180,24 @@
             },
             {
                 "Node": [
-                    "Node 模块暂未发布.md"
+                    {
+                        "测试工具": [
+                            "chai.md",
+                            "mocha.md",
+                            "should.md"
+                        ]
+                    }
                 ]
             },
             {
                 "工程化": [
                     "Git 常用命令大全.md",
                     "Shell命令大全.md",
-                    "webpack入门及实践.md"
+                    "webpack入门及实践.md",
+                    "bash.md",
+                    "git.md",
+                    "gulp-book.md",
+                    "shell常用命令.md"
                 ]
             },
             {
