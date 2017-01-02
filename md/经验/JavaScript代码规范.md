@@ -1,4 +1,5 @@
-# shenbao-JavaScriptStyleGuide
+
+# javascript代码规范
 
 javascript代码规范
 create by shenbao 2016.12.14
