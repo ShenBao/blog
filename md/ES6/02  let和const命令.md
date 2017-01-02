@@ -218,3 +218,16 @@ console.log(i); // 5
 上面代码中，变量i只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量。
 
 
+### ES6的块级作用域
+
+`let`实际上为JavaScript新增了块级作用域。
+
+```javascript
+function f1() {
+  let n = 5;
+  if (true) {
+    let n = 10;
+  }
+  console.log(n); // 5
+}
+```

@@ -37,7 +37,7 @@
 <div class="container">
 
     <div class="page-toc">
-        <ul><li><a href="#t0let和const命令">let和const命令</a><ul><li><a href="#t1let命令">let命令</a><ul><li><a href="#t2基本用法">基本用法</a></li><li><a href="#t3不存在变量提升">不存在变量提升</a></li><li><a href="#t4暂时性死区">暂时性死区</a></li><li><a href="#t5不允许重复声明">不允许重复声明</a></li></ul></li><li><a href="#t6块级作用域">块级作用域</a><ul><li><a href="#t7为什么需要块级作用域？">为什么需要块级作用域？</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0let和const命令">let和const命令</a><ul><li><a href="#t1let命令">let命令</a><ul><li><a href="#t2基本用法">基本用法</a></li><li><a href="#t3不存在变量提升">不存在变量提升</a></li><li><a href="#t4暂时性死区">暂时性死区</a></li><li><a href="#t5不允许重复声明">不允许重复声明</a></li></ul></li><li><a href="#t6块级作用域">块级作用域</a><ul><li><a href="#t7为什么需要块级作用域？">为什么需要块级作用域？</a></li><li><a href="#t8ES6的块级作用域">ES6的块级作用域</a></li></ul></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -192,6 +192,16 @@ f(); <span class="hljs-comment">// undefined</span>
 <span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// 5</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53D8;&#x91CF;i&#x53EA;&#x7528;&#x6765;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#xFF0C;&#x4F46;&#x662F;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x6D88;&#x5931;&#xFF0C;&#x6CC4;&#x9732;&#x6210;&#x4E86;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
+<h3 id="t8ES6&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;">ES6&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; <a href="#t8ES6&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;"> # </a></h3>
+<p><code>let</code>&#x5B9E;&#x9645;&#x4E0A;&#x4E3A;JavaScript&#x65B0;&#x589E;&#x4E86;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f1</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> n = <span class="hljs-number">5</span>;
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">let</span> n = <span class="hljs-number">10</span>;
+  }
+  <span class="hljs-built_in">console</span>.log(n); <span class="hljs-comment">// 5</span>
+}
+</code></pre>
 
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
