@@ -37,7 +37,7 @@
 <div class="container">
 
     <div class="page-toc">
-        <ul><li><a href="#t0let和const命令">let和const命令</a><ul><li><a href="#t1let命令">let命令</a><ul><li><a href="#t2基本用法">基本用法</a></li><li><a href="#t3不存在变量提升">不存在变量提升</a></li><li><a href="#t4暂时性死区">暂时性死区</a></li><li><a href="#t5不允许重复声明">不允许重复声明</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0let和const命令">let和const命令</a><ul><li><a href="#t1let命令">let命令</a><ul><li><a href="#t2基本用法">基本用法</a></li><li><a href="#t3不存在变量提升">不存在变量提升</a></li><li><a href="#t4暂时性死区">暂时性死区</a></li><li><a href="#t5不允许重复声明">不允许重复声明</a></li></ul></li><li><a href="#t6块级作用域">块级作用域</a><ul><li><a href="#t7为什么需要块级作用域？">为什么需要块级作用域？</a></li></ul></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -166,6 +166,32 @@ bar(); <span class="hljs-comment">// [2, 2]</span>
   }
 }
 </code></pre>
+<h2 id="t6&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;">&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF; <a href="#t6&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;"> # </a></h2>
+<h3 id="t7&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF1F; <a href="#t7&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF1F;"> # </a></h3>
+<p>ES5&#x53EA;&#x6709;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x548C;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6CA1;&#x6709;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x8FD9;&#x5E26;&#x6765;&#x5F88;&#x591A;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x573A;&#x666F;&#xFF0C;&#x5185;&#x5C42;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4F1A;&#x8986;&#x76D6;&#x5916;&#x5C42;&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> tmp = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(tmp);
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) {
+    <span class="hljs-keyword">var</span> tmp = <span class="hljs-string">&quot;hello world&quot;</span>;
+  }
+}
+
+f(); <span class="hljs-comment">// undefined</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;f&#x6267;&#x884C;&#x540E;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;<code>undefined</code>&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;&#x5BFC;&#x81F4;&#x5185;&#x5C42;&#x7684;tmp&#x53D8;&#x91CF;&#x8986;&#x76D6;&#x4E86;&#x5916;&#x5C42;&#x7684;tmp&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x573A;&#x666F;&#xFF0C;&#x7528;&#x6765;&#x8BA1;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x6CC4;&#x9732;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;hello&apos;</span>;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; s.length; i++) {
+  <span class="hljs-built_in">console</span>.log(s[i]);
+}
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53D8;&#x91CF;i&#x53EA;&#x7528;&#x6765;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#xFF0C;&#x4F46;&#x662F;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x6D88;&#x5931;&#xFF0C;&#x6CC4;&#x9732;&#x6210;&#x4E86;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
 
         <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
     </div>
