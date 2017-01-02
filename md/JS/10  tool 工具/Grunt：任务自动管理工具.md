@@ -22,8 +22,7 @@ Grunt使用模块结构，除了安装命令行界面以外，还要根据需要
 
 首先，在项目的根目录下，创建一个文本文件package.json，指定当前项目所需的模块。下面就是一个例子。
 
-{% highlight javascript %}
-
+```javascript 
 {
   "name": "my-project-name",
   "version": "0.1.0",
@@ -36,8 +35,7 @@ Grunt使用模块结构，除了安装命令行界面以外，还要根据需要
     "grunt-contrib-watch": "~0.1.4"
   }
 }
-
-{% endhighlight %}
+```
 
 上面这个package.json文件中，除了注明项目的名称和版本以外，还在devDependencies属性中指定了项目依赖的grunt模块和版本：grunt核心模块为最新的0.x.x版，jshint插件为最新版本，concat插件不低于0.1.1版，uglify插件不低于0.1.0版，watch插件不低于0.1.4版。
 
