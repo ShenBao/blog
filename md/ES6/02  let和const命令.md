@@ -242,11 +242,14 @@ ES6允许块级作用域的任意嵌套。
 
 上面代码使用了一个五层的块级作用域。外层作用域无法读取内层作用域的变量。
 
+
 ```javascript
  
 {{{{{
   {let insane = 'Hello World'};
-  console.log(insane); // 报错
+  console.log(insane); // 报错ReferenceError
 }}}}};
  
 ```
+
+
