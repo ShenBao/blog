@@ -167,34 +167,7 @@
             {
                 "ES6": [
                     "00  A.快速搞定常用的ES6新特性.md",
-                    "01  ECMAScript 6简介.md",
-                    "array.md",
-                    "arraybuffer.md",
-                    "async.md",
-                    "class.md",
-                    "decorator.md",
-                    "destructuring.md",
-                    "fp.md",
-                    "function.md",
-                    "generator.md",
-                    "intro.md",
-                    "iterator.md",
-                    "let.md",
-                    "mixin.md",
-                    "module.md",
-                    "number.md",
-                    "object.md",
-                    "promise.md",
-                    "proxy.md",
-                    "reference.md",
-                    "reflect.md",
-                    "regex.md",
-                    "set-map.md",
-                    "simd.md",
-                    "spec.md",
-                    "string.md",
-                    "style.md",
-                    "symbol.md"
+                    "01  ECMAScript 6简介.md"
                 ]
             },
             {
