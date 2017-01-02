@@ -191,13 +191,13 @@
             },
             {
                 "工程化": [
+                    "git.md",
+                    "shell常用命令.md",
+                    "bash.md",
                     "Git 常用命令大全.md",
                     "Shell命令大全.md",
-                    "webpack入门及实践.md",
-                    "bash.md",
-                    "git.md",
                     "gulp-book.md",
-                    "shell常用命令.md"
+                    "webpack入门及实践.md"
                 ]
             },
             {
