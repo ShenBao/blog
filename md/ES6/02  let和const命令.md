@@ -247,5 +247,5 @@ ES6允许块级作用域的任意嵌套。
 {{{{
   {let insane = 'Hello World'}
   console.log(insane); // 报错
-}}}};
+}}}}
 ```
