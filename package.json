@@ -17,21 +17,27 @@
         "md": [
             "首页.md",
             {
-                "HTML": [
-                    "01  概述.md",
-                    "02  Canvas.md",
-                    "03  SVG图像.md",
-                    "04  表单form.md",
-                    "05  file文件与二进制数据的操作.md",
-                    "06  Web Worker.md",
-                    "07  SSE：服务器发送事件 eventsource.md",
-                    "08  Page Visiblity.md",
-                    "09  FullScreen API：全屏操作.md",
-                    "10  Web Speech.md",
-                    "11  requestAnimationFrame.md",
-                    "12  WebSocket.md",
-                    "13  WebRTC.md",
-                    "14  Web Components.md"
+                "Web": [
+                    "jade.md",
+                    "less入门用法.md",
+                    {
+                        "web": [
+                            "01  概述.md",
+                            "02  Canvas.md",
+                            "03  SVG图像.md",
+                            "04  表单form.md",
+                            "05  file文件与二进制数据的操作.md",
+                            "06  Web Worker.md",
+                            "07  SSE：服务器发送事件 eventsource.md",
+                            "08  Page Visiblity.md",
+                            "09  FullScreen API：全屏操作.md",
+                            "10  Web Speech.md",
+                            "11  requestAnimationFrame.md",
+                            "12  WebSocket.md",
+                            "13  WebRTC.md",
+                            "14  Web Components.md"
+                        ]
+                    }
                 ]
             },
             {
@@ -126,7 +132,8 @@
                             "03  jQuery工具方法.md",
                             "04  jQuery插件开发.md",
                             "05  jQuery.Deferred对象.md",
-                            "06  如何做到jQuery-free.md"
+                            "06  如何做到jQuery-free.md",
+                            "07  Jquery同步和异步.md"
                         ]
                     },
                     {
@@ -157,9 +164,21 @@
                             "Gulp：任务自动管理工具.md",
                             "JavaScript 程序测试.md",
                             "Lint 工具.md",
-                            "PhantomJS.md",
                             "RequireJS和AMD规范.md",
-                            "Source Map.md"
+                            "Source Map.md",
+                            "phantomjs.md"
+                        ]
+                    },
+                    {
+                        "11  常用积累": [
+                            "DOM深入.md",
+                            "JS盒子模型.md",
+                            "promise.md",
+                            "webstorage.md",
+                            "原型链.md",
+                            "字符编码.md",
+                            "正则表达式.md",
+                            "预解析作用域闭包this.md"
                         ]
                     }
                 ]
@@ -198,7 +217,8 @@
             },
             {
                 "React": [
-                    "React基础知识.md"
+                    "React基础知识.md",
+                    "webpack搭配react入门及实践.md"
                 ]
             },
             {
@@ -241,7 +261,8 @@
                             "mocha.md",
                             "should.md"
                         ]
-                    }
+                    },
+                    "Nodejs教程.md"
                 ]
             },
             {
@@ -252,7 +273,27 @@
                     "Git 常用命令大全.md",
                     "Shell命令大全.md",
                     "gulp-book.md",
-                    "webpack入门及实践.md"
+                    "gulp.md",
+                    "webpack.md",
+                    "babel.md",
+                    "bower.md"
+                ]
+            },
+            {
+                "Ng": [
+                    "angular入门.md",
+                    "angular基础.md",
+                    "route.md",
+                    "指令.md",
+                    "服务.md"
+                ]
+            },
+            {
+                "Vue": [
+                    "Vue入门.md",
+                    "Vue方法篇.md",
+                    "Vue方法篇2.md",
+                    "Vue组件.md"
                 ]
             },
             {
@@ -261,7 +302,8 @@
                     "JavaScript代码规范.md",
                     "React编码规范.md",
                     "移动前端开发经验指南.md",
-                    "移动端上遇到的各种坑.md"
+                    "移动端上遇到的各种坑.md",
+                    "H5项目常见问题及注意事项.md"
                 ]
             },
             {
@@ -270,8 +312,8 @@
                 ]
             },
             {
-                "前沿杂谈": [
-                    "前沿  模块暂未发布.md"
+                "杂谈": [
+                    "杂谈  模块暂未开通.md"
                 ]
             },
             "关于我.md"

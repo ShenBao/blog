@@ -133,13 +133,13 @@ bin
 * git push -u origin master
 
 ## Git 常用命令常用流程
-![git](../../../blog/img/git/git_1.png "Title")
+![git](/img/git/git_1.png "常用命令常用流程")
 
 ## Git 常用命令速查表
-![git](../../../blog/img/git/git_2.jpg "Title")
+![git](/img/git/git_2.jpg "常用命令速查表")
 
 ## Git 常用命令综合详解图表 
-![git](../../../blog/img/git/git.png "Title")
+![git](/img/git/git.png "常用命令综合详解图表")
 
 
 
