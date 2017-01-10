@@ -219,7 +219,8 @@
                 "React": [
                     "React基础知识.md",
                     "webpack搭配react入门及实践.md",
-                    "React中ES6与ES5构建差别及JSX的使用.md"
+                    "React中ES6与ES5构建差别及JSX的使用.md",
+                    "PropTypes检查类型.md"
                 ]
             },
             {
