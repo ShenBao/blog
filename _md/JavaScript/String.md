@@ -44,5 +44,3 @@ toUpperCase()       |   把字符串转换为大写。
 toSource()      |   代表对象的源代码。
 toString()      |   返回字符串。
 valueOf()       |   返回某个字符串对象的原始值。
-
-

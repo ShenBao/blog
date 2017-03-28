@@ -61,13 +61,3 @@ attr.previousSibling|	属性没有同级节点。
 attr.removeChild	|   属性没有子节点。
 attr.replaceChild	|   属性没有子节点。
 attr.textContent	|   使用 attr.value 代替。
-
-
-
-
-
-
-
-
-
-

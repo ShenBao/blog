@@ -103,8 +103,3 @@ var d = new Date();
 var gmtHours = d.getTimezoneOffset()/60;
 console.log("The local time zone is: GMT " + gmtHours); //The local time zone is: GMT -8
 ```
-
-
-
-
-

@@ -87,8 +87,3 @@ element.toString()	    |   把元素转换为字符串。
 nodelist.item()	        |   返回 NodeList 中位于指定下标的节点。
 nodelist.length	        |   返回 NodeList 中的节点数。
 
-
-
-
-
-
