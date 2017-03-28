@@ -24,6 +24,6 @@ sort()      |	对数组的元素进行排序(可自定规律)                   
 valueOf()   |	返回 Array 对象的原始值                         |        Array对象        |       N
 toLocaleString()|	把数组转换为本地字符串                    |       字符串              |       N
 toSource()	|   返回该对象的源代码。(该特性是非标准的，请尽量不要在生产环境中使用它)   |         |     测试失败
-from()  |
-isArray()   |   确定传递的值是否为Array
+from()      |   |   |
+isArray()   |   确定传递的值是否为Array  |   |
 
