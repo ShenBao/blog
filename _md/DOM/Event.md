@@ -61,3 +61,14 @@ srcElement	    |   对于生成事件的 Window 对象、Document 对象或 Elem
 toElement	    |   对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。
 x,y	            |   事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。
 
+##  标准 Event 属性
+下面列出了 2 级 DOM 事件标准定义的属性。
+属性	|   描述
+---|---
+bubbles	        |   返回布尔值，指示事件是否是起泡事件类型。
+cancelable	    |   返回布尔值，指示事件是否可拥可取消的默认动作。
+currentTarget	|   返回其事件监听器触发该事件的元素。
+eventPhase	    |   返回事件传播的当前阶段。
+target	        |   返回触发此事件的元素（事件的目标节点）。
+timeStamp	    |   返回事件生成的日期和时间。
+type	        |   返回当前 Event 对象表示的事件的名称。
