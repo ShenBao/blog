@@ -20,12 +20,13 @@ Element 对象
 
 
 属性 / 方法 |   描述
-element.accessKey	设置或返回元素的快捷键。
-element.appendChild()	向元素添加新的子节点，作为最后一个子节点。
-element.attributes	返回元素属性的 NamedNodeMap。
-element.childNodes	返回元素子节点的 NodeList。
-element.className	设置或返回元素的 class 属性。
-element.clientHeight	返回元素的可见高度。
+---|---
+element.accessKey	    |   设置或返回元素的快捷键。
+element.appendChild()	|   向元素添加新的子节点，作为最后一个子节点。
+element.attributes	    |   返回元素属性的 NamedNodeMap。
+element.childNodes	    |   返回元素子节点的 NodeList。
+element.className	    |   设置或返回元素的 class 属性。
+element.clientHeight	|   返回元素的可见高度。
 element.clientWidth	返回元素的可见宽度。
 element.cloneNode()	克隆元素。
 element.compareDocumentPosition()	比较两个元素的文档位置。
