@@ -7,6 +7,8 @@
 > 大公司有大公司的玩法，小公司有小公司的折腾法，只是通过不同方法实现罢了！！！
 
 
+ps： [Blog](../)
+
 ##  JavaScript
 
 - [Array](./html/JavaScript/Array.html)
