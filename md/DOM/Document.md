@@ -1,4 +1,4 @@
-#Document 
+#   Document 
 
 ##  Document 对象
 每个载入浏览器的 HTML 文档都会成为 Document 对象。

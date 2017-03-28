@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>技术文档</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                技术文档
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">Home</a></li><li><a href="#"><span></span>JavaScript</a><ul><li><a href="../../html/JavaScript/Array.html">Array</a></li><li><a href="../../html/JavaScript/Boolean.html">Boolean</a></li><li><a href="../../html/JavaScript/Date.html">Date</a></li><li><a href="../../html/JavaScript/Math.html">Math</a></li><li><a href="../../html/JavaScript/Number.html">Number</a></li><li><a href="../../html/JavaScript/String.html">String</a></li><li><a href="../../html/JavaScript/RegExp.html">RegExp</a></li><li><a href="../../html/JavaScript/全局对象.html">全局对象</a></li><li><a href="../../html/JavaScript/Events.html">Events</a></li></ul></li><li><a href="#"><span></span>Browser</a><ul><li><a href="../../html/Browser/Window.html">Window</a></li><li><a href="../../html/Browser/Navigator.html">Navigator</a></li><li><a href="../../html/Browser/Screen.html">Screen</a></li><li><a href="../../html/Browser/History.html">History</a></li><li class="active"><a href="../../html/Browser/Location.html">Location</a></li></ul></li><li><a href="#"><span></span>DOM</a><ul><li><a href="../../html/DOM/Document.html">Document</a></li><li><a href="../../html/DOM/Element.html">Element</a></li><li><a href="../../html/DOM/Attribute.html">Attribute</a></li><li><a href="../../html/DOM/Event.html">Event</a></li></ul></li></ul>    
+        </div>
+        
+        
+        <div class="forkgithub"><a target="_blank" href="https://github.com/ShenBao">fork on github</a></div>
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Location">Location</a><ul><li><a href="#t1Location 对象属性">Location 对象属性</a></li><li><a href="#t2Location 对象方法">Location 对象方法</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0Location">Location <a href="#t0Location"> # </a></h1>
+<p>Location &#x5BF9;&#x8C61;&#x5305;&#x542B;&#x6709;&#x5173;&#x5F53;&#x524D; URL &#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>Location &#x5BF9;&#x8C61;&#x662F; Window &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; window.location &#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE;&#x3002;</p>
+<h2 id="t1Location &#x5BF9;&#x8C61;&#x5C5E;&#x6027;">Location &#x5BF9;&#x8C61;&#x5C5E;&#x6027; <a href="#t1Location &#x5BF9;&#x8C61;&#x5C5E;&#x6027;"> # </a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x4ECE;&#x4E95;&#x53F7; (#) &#x5F00;&#x59CB;&#x7684; URL&#xFF08;&#x951A;&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>host</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x5F53;&#x524D; URL &#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x7684;&#x4E3B;&#x673A;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>href</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5B8C;&#x6574;&#x7684; URL&#x3002;</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x7684;&#x8DEF;&#x5F84;&#x90E8;&#x5206;&#x3002;</td>
+</tr>
+<tr>
+<td>port</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5F53;&#x524D; URL &#x7684;&#x534F;&#x8BAE;&#x3002;</td>
+</tr>
+<tr>
+<td>search</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x4ECE;&#x95EE;&#x53F7; (?) &#x5F00;&#x59CB;&#x7684; URL&#xFF08;&#x67E5;&#x8BE2;&#x90E8;&#x5206;&#xFF09;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t2Location &#x5BF9;&#x8C61;&#x65B9;&#x6CD5;">Location &#x5BF9;&#x8C61;&#x65B9;&#x6CD5; <a href="#t2Location &#x5BF9;&#x8C61;&#x65B9;&#x6CD5;"> # </a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>&#x52A0;&#x8F7D;&#x65B0;&#x7684;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x5F53;&#x524D;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>&#x7528;&#x65B0;&#x7684;&#x6587;&#x6863;&#x66FF;&#x6362;&#x5F53;&#x524D;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+
+        <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
