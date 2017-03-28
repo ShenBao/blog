@@ -15,7 +15,7 @@
     "idoc": {
         "theme": "default",
         "md": [
-            "index.md",
+            "Home.md",
             {
                 "JavaScript": [
                     "Array.md",
