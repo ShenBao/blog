@@ -72,3 +72,12 @@ eventPhase	    |   返回事件传播的当前阶段。
 target	        |   返回触发此事件的元素（事件的目标节点）。
 timeStamp	    |   返回事件生成的日期和时间。
 type	        |   返回当前 Event 对象表示的事件的名称。
+
+
+##  标准 Event 方法
+下面列出了 2 级 DOM 事件标准定义的方法。IE 的事件模型不支持这些方法：
+方法	|   描述
+---|---
+initEvent()	    |   初始化新创建的 Event 对象的属性。
+preventDefault()|	通知浏览器不要执行与事件关联的默认动作。
+stopPropagation()|	不再派发事件。
