@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>技术文档</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                技术文档
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>JavaScript</a><ul><li><a href="../../html/JavaScript/Array.html">Array</a></li><li><a href="../../html/JavaScript/Boolean.html">Boolean</a></li><li><a href="../../html/JavaScript/Date.html">Date</a></li><li><a href="../../html/JavaScript/Math.html">Math</a></li><li><a href="../../html/JavaScript/Number.html">Number</a></li><li><a href="../../html/JavaScript/String.html">String</a></li><li><a href="../../html/JavaScript/RegExp.html">RegExp</a></li><li><a href="../../html/JavaScript/全局对象.html">全局对象</a></li><li><a href="../../html/JavaScript/Events.html">Events</a></li></ul></li><li><a href="#"><span></span>Browser</a><ul><li><a href="../../html/Browser/Window.html">Window</a></li><li><a href="../../html/Browser/Navigator.html">Navigator</a></li><li><a href="../../html/Browser/Screen.html">Screen</a></li><li><a href="../../html/Browser/History.html">History</a></li><li><a href="../../html/Browser/Location .html">Location </a></li></ul></li><li><a href="#"><span></span>DOM</a><ul><li><a href="../../html/DOM/Document.html">Document</a></li><li><a href="../../html/DOM/Element.html">Element</a></li><li class="active"><a href="../../html/DOM/Attribute.html">Attribute</a></li><li><a href="../../html/DOM/Event.html">Event</a></li></ul></li></ul>    
+        </div>
+        
+        
+        <div class="forkgithub"><a target="_blank" href="https://github.com/ShenBao">fork on github</a></div>
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Attribute">Attribute</a><ul><li><a href="#t1Attr 对象">Attr 对象</a></li><li><a href="#t2NamedNodeMap 对象">NamedNodeMap 对象</a></li><li><a href="#t3属性和方法">属性和方法</a></li><li><a href="#t4DOM 4 警告！">DOM 4 警告！</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0Attribute">Attribute <a href="#t0Attribute"> # </a></h1>
+<h2 id="t1Attr &#x5BF9;&#x8C61;">Attr &#x5BF9;&#x8C61; <a href="#t1Attr &#x5BF9;&#x8C61;"> # </a></h2>
+<p>&#x5728; HTML DOM &#x4E2D;&#xFF0C;Attr &#x5BF9;&#x8C61;&#x8868;&#x793A; HTML &#x5C5E;&#x6027;&#x3002;</p>
+<p>HTML &#x5C5E;&#x6027;&#x59CB;&#x7EC8;&#x5C5E;&#x4E8E; HTML &#x5143;&#x7D20;&#x3002;</p>
+<h2 id="t2NamedNodeMap &#x5BF9;&#x8C61;">NamedNodeMap &#x5BF9;&#x8C61; <a href="#t2NamedNodeMap &#x5BF9;&#x8C61;"> # </a></h2>
+<p>&#x5728; HTML DOM &#x4E2D;&#xFF0C;NamedNodeMap &#x5BF9;&#x8C61;&#x8868;&#x793A;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#x7684;&#x65E0;&#x5E8F;&#x96C6;&#x5408;&#x3002;</p>
+<p>NamedNodeMap &#x4E2D;&#x7684;&#x8282;&#x70B9;&#x53EF;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#x6216;&#x7D22;&#x5F15;&#xFF08;&#x6570;&#x5B57;&#xFF09;&#x6765;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x652F;&#x6301; Attr &#x5BF9;&#x8C61;&#x548C; NamedNodeMap &#x5BF9;&#x8C61;.</p>
+<h2 id="t3&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;">&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5; <a href="#t3&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;"> # </a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027; / &#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attr.isId</td>
+<td>&#x5982;&#x679C;&#x5C5E;&#x6027;&#x662F; id &#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</td>
+</tr>
+<tr>
+<td>attr.name</td>
+<td>&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.value</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.specified</td>
+<td>&#x5982;&#x679C;&#x5DF2;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</td>
+</tr>
+<tr>
+<td>nodemap.getNamedItem()</td>
+<td>&#x4ECE; NamedNodeMap &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>nodemap.item()</td>
+<td>&#x8FD4;&#x56DE; NamedNodeMap &#x4E2D;&#x4F4D;&#x4E8E;&#x6307;&#x5B9A;&#x4E0B;&#x6807;&#x7684;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>nodemap.length</td>
+<td>&#x8FD4;&#x56DE; NamedNodeMap &#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>nodemap.removeNamedItem()</td>
+<td>&#x79FB;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>nodemap.setNamedItem()</td>
+<td>&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF08;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#xFF09;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t4DOM 4 &#x8B66;&#x544A;&#xFF01;">DOM 4 &#x8B66;&#x544A;&#xFF01; <a href="#t4DOM 4 &#x8B66;&#x544A;&#xFF01;"> # </a></h2>
+<p>&#x5728; W3C DOM Core &#x4E2D;&#xFF0C;Attr (attribute) &#x5BF9;&#x8C61;&#x4ECE; Node &#x5BF9;&#x8C61;&#x7EE7;&#x627F;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5728; DOM 4 &#x4E2D;&#xFF0C;Attr &#x5BF9;&#x8C61;&#x4E0D;&#x518D;&#x4ECE; Node &#x7EE7;&#x627F;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x672A;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x5B89;&#x5168;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x5728;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4E0A;&#x4F7F;&#x7528;&#x8282;&#x70B9;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027; / &#x65B9;&#x6CD5;</th>
+<th>&#x907F;&#x514D;&#x7684;&#x7406;&#x7531;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attr.appendChild()</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.attributes</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.baseURI</td>
+<td>&#x4F7F;&#x7528; document.baseURI &#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.childNodes</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.cloneNode()</td>
+<td>&#x4F7F;&#x7528; attr.value &#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.firstChild</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.hasAttributes()</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5C5E;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.hasChildNodes</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.insertBefore()</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.isEqualNode()</td>
+<td>&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.isSameNode()</td>
+<td>&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.isSupported()</td>
+<td>&#x59CB;&#x7EC8;&#x4E3A; true&#x3002;</td>
+</tr>
+<tr>
+<td>attr.lastChild</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.nextSibling</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x540C;&#x7EA7;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.nodeName</td>
+<td>&#x4F7F;&#x7528; attr.name &#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.nodeType</td>
+<td>&#x59CB;&#x7EC8;&#x4E3A; 2 (ATTRIBUTE_NODE)&#x3002;</td>
+</tr>
+<tr>
+<td>attr.nodeValue</td>
+<td>&#x4F7F;&#x7528; attr.value &#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.normalize()</td>
+<td>&#x5C5E;&#x6027;&#x65E0;&#x6CD5;&#x88AB;&#x6B63;&#x5E38;&#x5316;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.ownerDocument</td>
+<td>&#x59CB;&#x7EC8;&#x662F;&#x60A8;&#x7684; HTML &#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.ownerElement</td>
+<td>&#x8FD9;&#x662F;&#x60A8;&#x7528;&#x6765;&#x8BBF;&#x95EE;&#x8BE5;&#x5C5E;&#x6027;&#x7684; HTML &#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.parentNode</td>
+<td>&#x8FD9;&#x662F;&#x60A8;&#x7528;&#x6765;&#x8BBF;&#x95EE;&#x8BE5;&#x5C5E;&#x6027;&#x7684; HTML &#x5143;&#x7D20;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.previousSibling</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x540C;&#x7EA7;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.removeChild</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.replaceChild</td>
+<td>&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x3002;</td>
+</tr>
+<tr>
+<td>attr.textContent</td>
+<td>&#x4F7F;&#x7528; attr.value &#x4EE3;&#x66FF;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+
+        <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

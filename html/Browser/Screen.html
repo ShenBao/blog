@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>技术文档</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                技术文档
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">index</a></li><li><a href="#"><span></span>JavaScript</a><ul><li><a href="../../html/JavaScript/Array.html">Array</a></li><li><a href="../../html/JavaScript/Boolean.html">Boolean</a></li><li><a href="../../html/JavaScript/Date.html">Date</a></li><li><a href="../../html/JavaScript/Math.html">Math</a></li><li><a href="../../html/JavaScript/Number.html">Number</a></li><li><a href="../../html/JavaScript/String.html">String</a></li><li><a href="../../html/JavaScript/RegExp.html">RegExp</a></li><li><a href="../../html/JavaScript/全局对象.html">全局对象</a></li><li><a href="../../html/JavaScript/Events.html">Events</a></li></ul></li><li><a href="#"><span></span>Browser</a><ul><li><a href="../../html/Browser/Window.html">Window</a></li><li><a href="../../html/Browser/Navigator.html">Navigator</a></li><li class="active"><a href="../../html/Browser/Screen.html">Screen</a></li><li><a href="../../html/Browser/History.html">History</a></li><li><a href="../../html/Browser/Location .html">Location </a></li></ul></li><li><a href="#"><span></span>DOM</a><ul><li><a href="../../html/DOM/Document.html">Document</a></li><li><a href="../../html/DOM/Element.html">Element</a></li><li><a href="../../html/DOM/Attribute.html">Attribute</a></li><li><a href="../../html/DOM/Event.html">Event</a></li></ul></li></ul>    
+        </div>
+        
+        
+        <div class="forkgithub"><a target="_blank" href="https://github.com/ShenBao">fork on github</a></div>
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0Screen">Screen</a><ul><li><a href="#t1Screen 对象属性">Screen 对象属性</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0Screen">Screen <a href="#t0Screen"> # </a></h1>
+<p>Screen &#x5BF9;&#x8C61;&#x5305;&#x542B;&#x6709;&#x5173;&#x5BA2;&#x6237;&#x7AEF;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="t1Screen &#x5BF9;&#x8C61;&#x5C5E;&#x6027;">Screen &#x5BF9;&#x8C61;&#x5C5E;&#x6027; <a href="#t1Screen &#x5BF9;&#x8C61;&#x5C5E;&#x6027;"> # </a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>availHeight</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x9AD8;&#x5EA6; (&#x9664; Windows &#x4EFB;&#x52A1;&#x680F;&#x4E4B;&#x5916;)&#x3002;</td>
+</tr>
+<tr>
+<td>availWidth</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x5BBD;&#x5EA6; (&#x9664; Windows &#x4EFB;&#x52A1;&#x680F;&#x4E4B;&#x5916;)&#x3002;</td>
+</tr>
+<tr>
+<td>bufferDepth</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x8C03;&#x8272;&#x677F;&#x7684;&#x6BD4;&#x7279;&#x6DF1;&#x5EA6;&#x3002;</td>
+</tr>
+<tr>
+<td>colorDepth</td>
+<td>&#x8FD4;&#x56DE;&#x76EE;&#x6807;&#x8BBE;&#x5907;&#x6216;&#x7F13;&#x51B2;&#x5668;&#x4E0A;&#x7684;&#x8C03;&#x8272;&#x677F;&#x7684;&#x6BD4;&#x7279;&#x6DF1;&#x5EA6;&#x3002;</td>
+</tr>
+<tr>
+<td>deviceXDPI</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x6BCF;&#x82F1;&#x5BF8;&#x6C34;&#x5E73;&#x70B9;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>deviceYDPI</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x6BCF;&#x82F1;&#x5BF8;&#x5782;&#x76F4;&#x70B9;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>fontSmoothingEnabled</td>
+<td>&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x662F;&#x5426;&#x5728;&#x663E;&#x793A;&#x63A7;&#x5236;&#x9762;&#x677F;&#x4E2D;&#x542F;&#x7528;&#x4E86;&#x5B57;&#x4F53;&#x5E73;&#x6ED1;&#x3002;</td>
+</tr>
+<tr>
+<td>height</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x9AD8;&#x5EA6;&#x3002;</td>
+</tr>
+<tr>
+<td>logicalXDPI</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x6BCF;&#x82F1;&#x5BF8;&#x7684;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x7684;&#x5E38;&#x89C4;&#x70B9;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>logicalYDPI</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x6BCF;&#x82F1;&#x5BF8;&#x7684;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x5E38;&#x89C4;&#x70B9;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>pixelDepth</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5C4F;&#x5E55;&#x7684;&#x989C;&#x8272;&#x5206;&#x8FA8;&#x7387;&#xFF08;&#x6BD4;&#x7279;&#x6BCF;&#x50CF;&#x7D20;&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td>updateInterval</td>
+<td>&#x8BBE;&#x7F6E;&#x6216;&#x8FD4;&#x56DE;&#x5C4F;&#x5E55;&#x7684;&#x5237;&#x65B0;&#x7387;&#x3002;</td>
+</tr>
+<tr>
+<td>width</td>
+<td>&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x5668;&#x5C4F;&#x5E55;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+
+        <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
