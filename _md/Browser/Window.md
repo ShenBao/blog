@@ -1,4 +1,5 @@
 # Window
+Window 对象表示浏览器中打开的窗口。
 
 ## Window 对象集合
 集合	|   描述
