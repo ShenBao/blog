@@ -7,7 +7,7 @@
 > 大公司有大公司的玩法，小公司有小公司的折腾法，只是通过不同方法实现罢了！！！
 
 
-PS:[点击这里查看Blog](https://shenbao.github.io)
+PS： [点击这里查看Blog](https://shenbao.github.io)
 
 ##  JavaScript
 
