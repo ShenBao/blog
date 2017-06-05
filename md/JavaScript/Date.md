@@ -10,6 +10,8 @@ prototype	    |   添加属性和方法
 方法  |   描述
 ---|---
 Date()	        |   返回当日的日期和时间。
+parse()         |   返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
+UTC()           |   根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
 getDate()       |   从 Date 对象返回一个月中的某一天 (1 ~ 31)。
 getDay()        |   从 Date 对象返回一周中的某一天 (0 ~ 6)。
 getMonth()      |   从 Date 对象返回月份 (0 ~ 11)。
@@ -29,7 +31,6 @@ getUTCHours()           |   根据世界时返回 Date 对象的小时 (0 ~ 23)�
 getUTCMinutes()         |   根据世界时返回 Date 对象的分钟 (0 ~ 59)。
 getUTCSeconds()         |   根据世界时返回 Date 对象的秒钟 (0 ~ 59)。
 getUTCMilliseconds()    |   根据世界时返回 Date 对象的毫秒(0 ~ 999)。
-parse()        |    返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
 setDate()       |   设置 Date 对象中月的某一天 (1 ~ 31)。
 setMonth()      |   设置 Date 对象中月份 (0 ~ 11)。
 setFullYear()   |   设置 Date 对象中的年份（四位数字）。
@@ -55,7 +56,6 @@ toUTCString()   |   根据世界时，把 Date 对象转换为字符串。
 toLocaleString()|   根据本地时间格式，把 Date 对象转换为字符串。
 toLocaleTimeString()|   根据本地时间格式，把 Date 对象的时间部分转换为字符串。
 toLocaleDateString()|   根据本地时间格式，把 Date 对象的日期部分转换为字符串。
-UTC()               |   根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
 valueOf()           |   返回 Date 对象的原始值。
 
 
