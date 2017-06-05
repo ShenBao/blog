@@ -10,10 +10,6 @@ prototype   |   添加属性和方法
 ## 方法
 方法  |   描述
 ---|---
-anchor()        |   创建 HTML 锚。
-big()           |   用大号字体显示字符串。
-blink()         |   显示闪动字符串。
-bold()          |   使用粗体显示字符串。
 charAt()        |   返回在指定位置的字符。
 charCodeAt()    |   返回在指定的位置的字符的 Unicode 编码。
 concat()        |   连接字符串。
@@ -22,6 +18,11 @@ substr()        |   从起始索引号提取字符串中指定数目的字符。
 substring()     |   提取字符串中两个指定的索引号之间的字符。
 indexOf()       |   检索字符串。
 lastIndexOf()	|   从后向前搜索字符串。
+trim()          |   这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。
+toLocaleLowerCase() |   把字符串转换为小写。(借鉴自java.lang.String 中的同名方法)(针对特定地区的实现)
+toLocaleUpperCase() |   把字符串转换为大写。(针对特定地区的实现)
+toLowerCase()       |   把字符串转换为小写。
+toUpperCase()       |   把字符串转换为大写。
 fixed()         |   以打字机文本显示字符串。
 fontcolor()     |   使用指定的颜色来显示字符串。
 fontsize()      |   使用指定的尺寸来显示字符串。
@@ -37,12 +38,11 @@ split()         |   把字符串分割为字符串数组。
 strike()        |   使用删除线来显示字符串。
 sub()           |   把字符串显示为下标。
 sup()           |   把字符串显示为上标。
-toLocaleLowerCase() |   把字符串转换为小写。
-toLocaleUpperCase() |   把字符串转换为大写。
-toLowerCase()       |   把字符串转换为小写。
-toUpperCase()       |   把字符串转换为大写。
 toSource()      |   代表对象的源代码。
 toString()      |   返回字符串。
 valueOf()       |   返回某个字符串对象的原始值。
-trim()          |   这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。
+anchor()        |   创建 HTML 锚。
+big()           |   用大号字体显示字符串。
+blink()         |   显示闪动字符串。
+bold()          |   使用粗体显示字符串。
 
