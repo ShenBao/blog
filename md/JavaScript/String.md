@@ -23,18 +23,18 @@ toLocaleLowerCase() |   把字符串转换为小写。(借鉴自java.lang.String
 toLocaleUpperCase() |   把字符串转换为大写。(针对特定地区的实现)
 toLowerCase()       |   把字符串转换为小写。
 toUpperCase()       |   把字符串转换为大写。
+match()         |   找到一个或多个正则表达式的匹配。
+search()        |   检索与正则表达式相匹配的值。
+replace()       |   替换与正则表达式匹配的子串。这个方法接受两个参数：第一个参数可以是一个RegExp 对象或者一个字符串（这个字符串不会被转换成正则表达式），第二个参数可以是一个字符串或者一个函数
+split()         |   把字符串分割为字符串数组。
+localeCompare() |   用本地特定的顺序来比较两个字符串。
 fixed()         |   以打字机文本显示字符串。
 fontcolor()     |   使用指定的颜色来显示字符串。
 fontsize()      |   使用指定的尺寸来显示字符串。
 fromCharCode()  |   从字符编码创建一个字符串。
 italics()	    |   使用斜体显示字符串。
 link()          |   将字符串显示为链接。
-localeCompare() |   用本地特定的顺序来比较两个字符串。
-match()         |   找到一个或多个正则表达式的匹配。
-replace()       |   替换与正则表达式匹配的子串。
-search()        |   检索与正则表达式相匹配的值。
 small()         |   使用小字号来显示字符串。
-split()         |   把字符串分割为字符串数组。
 strike()        |   使用删除线来显示字符串。
 sub()           |   把字符串显示为下标。
 sup()           |   把字符串显示为上标。
