@@ -58,7 +58,7 @@ toLocaleTimeString()|   根据本地时间格式，把 Date 对象的时间部�
 toString()      |   把 Date 对象转换为字符串，返回带有时区信息的日期和
 时间，其中时间一般以军用时间（即小时的范围是0 到23）表示
 toLocaleDateString()|   根据本地时间格式，把 Date 对象的日期部分转换为字符串。
-valueOf()           |   返回 Date 对象的原始值。
+valueOf()           |   不返回字符串，而是返回日期的毫秒表示
 
 
 ## 创建对象
