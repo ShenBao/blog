@@ -49,13 +49,14 @@ setUTCMinutes() |   根据世界时设置 Date 对象中的分钟 (0 ~ 59)。
 setUTCSeconds() |   根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。
 setUTCMilliseconds()|   根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
 toSource()      |   返回该对象的源代码。
-toString()      |   把 Date 对象转换为字符串。
 toTimeString()  |   把 Date 对象的时间部分转换为字符串。
 toDateString()  |   把 Date 对象的日期部分转换为字符串。
 toGMTString()<sup>废弃</sup>   |   请使用 toUTCString() 方法代替。
 toUTCString()   |   根据世界时，把 Date 对象转换为字符串。
 toLocaleString()|   根据本地时间格式，把 Date 对象转换为字符串。
 toLocaleTimeString()|   根据本地时间格式，把 Date 对象的时间部分转换为字符串。
+toString()      |   把 Date 对象转换为字符串，返回带有时区信息的日期和
+时间，其中时间一般以军用时间（即小时的范围是0 到23）表示
 toLocaleDateString()|   根据本地时间格式，把 Date 对象的日期部分转换为字符串。
 valueOf()           |   返回 Date 对象的原始值。
 
