@@ -43,3 +43,4 @@ var fn = new Function("参数1", "参数2", "函数体doSomething"); // 不推�
 
 
 
+
