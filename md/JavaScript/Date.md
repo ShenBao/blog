@@ -1,61 +1,76 @@
 #  Date
 
-## 属性
+### 属性
 属性名 | 描述 
 ---|---
 constructor	    |   返回对创建此对象的 Date 函数的引用。
 prototype	    |   添加属性和方法
 
-## 方法
+### 基础方法
 方法  |   描述
 ---|---
 Date()	        |   返回当日的日期和时间。
 parse()         |   返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
 UTC()           |   根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
 now() <sup>es5</sup>  |   返回表示调用这个方法时的日期和时间的毫秒数.
-getDate()       |   从 Date 对象返回一个月中的某一天 (1 ~ 31)。
-getDay()        |   从 Date 对象返回一周中的某一天 (0 ~ 6)。
-getMonth()      |   从 Date 对象返回月份 (0 ~ 11)。
-getFullYear()   |   从 Date 对象以四位数字返回年份。
+
+### 日期/时间组件方法
+方法  |   描述
+---|---
+getTime()       |   返回 1970 年 1 月 1 日至今的毫秒数。与valueOf()方法返回的值相同
+setTime(毫秒)   |   以毫秒设置 Date 对象，会改变整个日期
+getFullYear(年) |   从 Date 对象以四位数字返回年份。
+getUTCFullYear(年)        |   根据世界时从 Date 对象返回四位数的年份。
 getYear() <sup>废弃</sup>  |   请使用 getFullYear() 方法代替。
-getHours()      |   返回 Date 对象的小时 (0 ~ 23)。
-getMinutes()    |   返回 Date 对象的分钟 (0 ~ 59)。
-getSeconds()    |   返回 Date 对象的秒数 (0 ~ 59)。
-getMilliseconds()|	返回 Date 对象的毫秒(0 ~ 999)。
-getTime()       |   返回 1970 年 1 月 1 日至今的毫秒数。
-getTimezoneOffset()     |   返回本地时间与格林威治标准时间 (GMT) 的分钟差。
-getUTCDate()            |   根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。
-getUTCDay()             |   根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。
-getUTCMonth()           |   根据世界时从 Date 对象返回月份 (0 ~ 11)。
-getUTCFullYear()        |   根据世界时从 Date 对象返回四位数的年份。
-getUTCHours()           |   根据世界时返回 Date 对象的小时 (0 ~ 23)。
-getUTCMinutes()         |   根据世界时返回 Date 对象的分钟 (0 ~ 59)。
-getUTCSeconds()         |   根据世界时返回 Date 对象的秒钟 (0 ~ 59)。
-getUTCMilliseconds()    |   根据世界时返回 Date 对象的毫秒(0 ~ 999)。
-setDate()       |   设置 Date 对象中月的某一天 (1 ~ 31)。
-setMonth()      |   设置 Date 对象中月份 (0 ~ 11)。
 setFullYear()   |   设置 Date 对象中的年份（四位数字）。
-setYear()<sup>废弃</sup>  |   请使用 setFullYear() 方法代替。
-setHours()      |   设置 Date 对象中的小时 (0 ~ 23)。
-setMinutes()    |   设置 Date 对象中的分钟 (0 ~ 59)。
-setSeconds()    |   设置 Date 对象中的秒钟 (0 ~ 59)。
-setMilliseconds()|  设置 Date 对象中的毫秒 (0 ~ 999)。
-setTime()       |   以毫秒设置 Date 对象。
-setUTCDate()    |   根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。
-setUTCMonth()   |   根据世界时设置 Date 对象中的月份 (0 ~ 11)。
 setUTCFullYear()|   根据世界时设置 Date 对象中的年份（四位数字）。
-setUTCHours()   |   根据世界时设置 Date 对象中的小时 (0 ~ 23)。
-setUTCMinutes() |   根据世界时设置 Date 对象中的分钟 (0 ~ 59)。
-setUTCSeconds() |   根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。
-setUTCMilliseconds()|   根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
+setYear()<sup>废弃</sup>  |   请使用 setFullYear() 方法代替。
+getMonth()      |   从 Date 对象返回月份 (0 ~ 11)。
+getUTCMonth()   |   根据世界时从 Date 对象返回月份 (0 ~ 11)。
+setMonth(月)    |   设置 Date 对象中月份 (0 ~ 11)。
+setUTCMonth(月) |   根据世界时设置 Date 对象中的月份 (0 ~ 11)。
+getDate()       |   从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+getUTCDate()    |   根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。
+setDate(日)     |   设置 Date 对象中月的某一天 (1 ~ 31)。
+setUTCDate(日)  |   根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。
+getDay()        |   从 Date 对象返回一周中的某一天 (0 ~ 6)。
+getUTCDay()     |   根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。
+getHours()      |   返回 Date 对象的小时 (0 ~ 23)。
+getUTCHours()     |   根据世界时返回 Date 对象的小时 (0 ~ 23)。
+setHours(时)      |   设置 Date 对象中的小时 (0 ~ 23)。
+setUTCHours(时)   |   根据世界时设置 Date 对象中的小时 (0 ~ 23)。
+getMinutes()      |   返回 Date 对象的分钟 (0 ~ 59)。
+getUTCMinutes()   |   根据世界时返回 Date 对象的分钟 (0 ~ 59)。
+setMinutes(分)    |   设置 Date 对象中的分钟 (0 ~ 59)。
+setUTCMinutes(分) |   根据世界时设置 Date 对象中的分钟 (0 ~ 59)。
+getSeconds()      |   返回 Date 对象的秒数 (0 ~ 59)。
+getUTCSeconds()   |   根据世界时返回 Date 对象的秒钟 (0 ~ 59)。
+setSeconds(秒)      |   设置 Date 对象中的秒钟 (0 ~ 59)。
+setUTCSeconds(秒)   |   根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。
+getMilliseconds()|	返回 Date 对象的毫秒(0 ~ 999)。
+getUTCMilliseconds()    |   根据世界时返回 Date 对象的毫秒(0 ~ 999)。
+setMilliseconds(毫秒)|  设置 Date 对象中的毫秒 (0 ~ 999)。
+setUTCMilliseconds(毫秒)|   根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
+getTimezoneOffset()     |   返回本地时间与UTC时间相差的分钟数。例如，美国东部标准时间返回300。在某
+地进入夏令时的情况下，这个值会有所变化
 toSource()      |   返回该对象的源代码。
+
+### 日期格式化方法
+
+方法  |   描述
+---|---
 toDateString()  |   把 Date 对象的日期部分转换为字符串,以特定于实现的格式显示星期几、月、日和年；
 toTimeString()  |   把 Date 对象的时间部分转换为字符串,以特定于实现的格式显示时、分、秒和时区；
 toLocaleDateString() |   根据本地时间格式，把 Date 对象的日期部分转换为字符串,以特定于地区的格式显示星期几、月、日和年；
 toLocaleTimeString() |   根据本地时间格式，把 Date 对象的时间部分转换为字符串,以特定于实现的格式显示时、分、秒；
-toLocaleString()|   根据本地时间格式，把 Date 对象转换为字符串。
 toUTCString()   |   根据世界时，把 Date 对象转换为字符串。
 toGMTString()<sup>废弃</sup>   |   请使用 toUTCString() 方法代替。
+
+### 继承的方法
+
+方法  |   描述
+---|---
+toLocaleString()|   根据本地时间格式，把 Date 对象转换为字符串。
 toString()      |   把 Date 对象转换为字符串，返回带有时区信息的日期和时间，其中时间一般以军用时间（即小时的范围是0 到23）表示
 valueOf()           |   不返回字符串，而是返回日期的毫秒表示
 
