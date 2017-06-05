@@ -86,6 +86,16 @@ match	|   找到一个或多个正则表达式的匹配。
 replace	|   替换与正则表达式匹配的子串。
 split	|   把字符串分割为字符串数组。
 
+## RegExp构造函数属性
+方法  |  短属性名  | 描述
+---|---|---
+input       |   $_  |    最近一次要匹配的字符串。Opera未实现此属性
+lastMatch   |   $&  |    最近一次的匹配项。Opera未实现此属性
+lastParen   |   $+  |    最近一次匹配的捕获组。Opera未实现此属性
+leftContext |   $`  |    input字符串中lastMatch之前的文本
+multiline   |   $*  |    布尔值，表示是否所有表达式都使用多行模式。IE和Opera未实现此属性
+rightContext|    $' |    Input字符串中lastMatch之后的文本
+
 
 # 注
 
