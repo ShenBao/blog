@@ -54,6 +54,8 @@ getter 和setter 函数
 - [[Get]]：在读取属性时调用的函数。默认值为undefined。
 - [[Set]]：在写入属性时调用的函数。默认值为undefined。
 
+一般都使用两个非标准的方法：__defineGetter__()和__defineSetter__()
+
 访问器属性不能直接定义，必须使用Object.defineProperty()来定义.
 
 ```
