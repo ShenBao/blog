@@ -13,6 +13,8 @@ Object.defineProperty() 这个方法接收三个参数：属性所在的对象�
 
 描述符（descriptor）对象的属性必须是：configurable、enumerable、writable 和value。
 
+在调用Object.defineProperty()方法时，如果不指定，configurable、enumerable 和writable 特性的默认值都是false
+
 ```
 var person = {}
 Object.defineProperty(person,'name',{
