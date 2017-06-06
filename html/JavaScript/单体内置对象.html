@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知秋的技术文档</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                知秋的技术文档
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">Home</a></li><li><a href="#"><span></span>JavaScript</a><ul><li><a href="../../html/JavaScript/Array.html">Array</a></li><li><a href="../../html/JavaScript/Boolean.html">Boolean</a></li><li><a href="../../html/JavaScript/Date.html">Date</a></li><li><a href="../../html/JavaScript/Math.html">Math</a></li><li><a href="../../html/JavaScript/Number.html">Number</a></li><li><a href="../../html/JavaScript/String.html">String</a></li><li><a href="../../html/JavaScript/RegExp.html">RegExp</a></li><li><a href="../../html/JavaScript/全局对象.html">全局对象</a></li><li><a href="../../html/JavaScript/Events.html">Events</a></li><li><a href="../../html/JavaScript/Function.html">Function</a></li><li class="active"><a href="../../html/JavaScript/单体内置对象.html">单体内置对象</a></li><li><a href="../../html/JavaScript/基本包装类型.html">基本包装类型</a></li></ul></li><li><a href="#"><span></span>Browser</a><ul><li><a href="../../html/Browser/Window.html">Window</a></li><li><a href="../../html/Browser/Navigator.html">Navigator</a></li><li><a href="../../html/Browser/Screen.html">Screen</a></li><li><a href="../../html/Browser/History.html">History</a></li><li><a href="../../html/Browser/Location.html">Location</a></li></ul></li><li><a href="#"><span></span>DOM</a><ul><li><a href="../../html/DOM/Document.html">Document</a></li><li><a href="../../html/DOM/Element.html">Element</a></li><li><a href="../../html/DOM/Attribute.html">Attribute</a></li><li><a href="../../html/DOM/Event.html">Event</a></li></ul></li></ul>    
+        </div>
+        
+        
+        <div class="forkgithub"><a target="_blank" href="https://github.com/ShenBao">fork on github</a></div>
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0单体内置对象">单体内置对象</a><ul><li><a href="#t1Global对象">Global对象</a><ul><li><a href="#t2URI 编码方法">URI 编码方法</a></li><li><a href="#t3eval()方法">eval()方法</a></li><li><a href="#t4Global 对象的属性">Global 对象的属性</a></li><li><a href="#t5window 对象">window 对象</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;">&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61; <a href="#t0&#x5355;&#x4F53;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;"> # </a></h1>
+<h2 id="t1Global&#x5BF9;&#x8C61;">Global&#x5BF9;&#x8C61; <a href="#t1Global&#x5BF9;&#x8C61;"> # </a></h2>
+<p>isNaN()&#x3001;isFinite()&#x3001;parseInt()&#x4EE5;&#x53CA;parseFloat()&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5168;&#x90FD;Global&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="t2URI &#x7F16;&#x7801;&#x65B9;&#x6CD5;">URI &#x7F16;&#x7801;&#x65B9;&#x6CD5; <a href="#t2URI &#x7F16;&#x7801;&#x65B9;&#x6CD5;"> # </a></h3>
+<p>&#x7528;&#x4E8E;&#x66FF;&#x4EE3;&#x5DF2;&#x7ECF;&#x88AB;ECMA-262 &#x7B2C;3 &#x7248;&#x5E9F;&#x5F03;&#x7684;escape()&#x548C;unescape()&#x3002;</p>
+<ul>
+<li>URI&#x7F16;&#x7801;&#x65B9;&#x6CD5;:encodeURI()&#x548C;encodeURIComponent();<ul>
+<li>encodeURI: &#x4E0D;&#x4F1A;&#x5BF9;&#x672C;&#x8EAB;&#x5C5E;&#x4E8E;URI &#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;&#x4F8B;&#x5982;&#x5192;&#x53F7;&#x3001;&#x6B63;&#x659C;&#x6760;&#x3001;&#x95EE;&#x53F7;&#x548C;&#x4E95;&#x5B57;&#x53F7;&#xFF1B;&#x9664;&#x4E86;&#x7A7A;&#x683C;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x90FD;&#x539F;&#x5C01;&#x4E0D;&#x52A8;&#xFF0C;&#x53EA;&#x6709;&#x7A7A;&#x683C;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x4E86;%20</li>
+<li>&#x548C;encodeURIComponent: &#x4F1A;&#x5BF9;&#x5B83;&#x53D1;&#x73B0;&#x7684;&#x4EFB;&#x4F55;&#x975E;&#x6807;&#x51C6;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x7F16;&#x7801;</li>
+</ul>
+</li>
+<li>URI&#x89E3;&#x7801;&#x65B9;&#x6CD5;&#xFF1A;decodeURI()&#x548C;decodeURIComponent()&#x3002;<ul>
+<li>decodeURI&#xFF1A;&#x53EA;&#x80FD;&#x5BF9;&#x4F7F;&#x7528;encodeURI()&#x66FF;&#x6362;&#x7684;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x89E3;&#x7801;</li>
+<li>&#x548C;decodeURIComponent&#xFF1A; &#x80FD;&#x591F;&#x89E3;&#x7801;&#x4F7F;&#x7528;encodeURIComponent()&#x7F16;&#x7801;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF0C;&#x5373;&#x5B83;&#x53EF;&#x4EE5;&#x89E3;&#x7801;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x7684;&#x7F16;&#x7801;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t3eval()&#x65B9;&#x6CD5;">eval()&#x65B9;&#x6CD5; <a href="#t3eval()&#x65B9;&#x6CD5;"> # </a></h3>
+<p>eval()&#x65B9;&#x6CD5;&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;ECMAScript &#x89E3;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x8981;&#x6267;&#x884C;&#x7684;ECMAScript &#xFF08;&#x6216;JavaScript&#xFF09;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h3 id="t4Global &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;">Global &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027; <a href="#t4Global &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x63CF;&#x8FF0; </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>&#x7279;&#x6B8A;&#x503C;undefined    </td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>&#x7279;&#x6B8A;&#x503C;NaN          </td>
+</tr>
+<tr>
+<td>Infinity</td>
+<td>&#x7279;&#x6B8A;&#x503C;Infinity     </td>
+</tr>
+<tr>
+<td>Object</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Object      </td>
+</tr>
+<tr>
+<td>Array</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Array       </td>
+</tr>
+<tr>
+<td>Function</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Function    </td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Boolean     </td>
+</tr>
+<tr>
+<td>String</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;String      </td>
+</tr>
+<tr>
+<td>Number</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Number      </td>
+</tr>
+<tr>
+<td>Date</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Date</td>
+</tr>
+<tr>
+<td>RegExp</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;RegExp</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;Error</td>
+</tr>
+<tr>
+<td>EvalError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;EvalError</td>
+</tr>
+<tr>
+<td>RangeError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;RangeError</td>
+</tr>
+<tr>
+<td>ReferenceError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;ReferenceError</td>
+</tr>
+<tr>
+<td>SyntaxError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;SyntaxError</td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;TypeError</td>
+</tr>
+<tr>
+<td>URIError</td>
+<td>&#x6784;&#x9020;&#x51FD;&#x6570;URIError</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t5window &#x5BF9;&#x8C61;">window &#x5BF9;&#x8C61; <a href="#t5window &#x5BF9;&#x8C61;"> # </a></h3>
+<p>ECMAScript &#x867D;&#x7136;&#x6CA1;&#x6709;&#x6307;&#x51FA;&#x5982;&#x4F55;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;Global &#x5BF9;&#x8C61;&#xFF0C;&#x4F46;Web &#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x662F;&#x5C06;&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;
+window &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x52A0;&#x4EE5;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x90FD;&#x6210;&#x4E3A;&#x4E86;window
+&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+
+        <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+		(function(window,document,undefined){
+			var hearts = [];
+			window.requestAnimationFrame = (function(){
+					return window.requestAnimationFrame || 
+							   window.webkitRequestAnimationFrame ||
+							   window.mozRequestAnimationFrame ||
+							   window.oRequestAnimationFrame ||
+							   window.msRequestAnimationFrame ||
+							   function (callback){
+									   setTimeout(callback,1000/60);
+							   }
+			})();
+			init();
+			function init(){
+					css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+					attachEvent();
+					gameloop();
+			}
+			function gameloop(){
+					for(var i=0;i<hearts.length;i++){
+						if(hearts[i].alpha <=0){
+								document.body.removeChild(hearts[i].el);
+								hearts.splice(i,1);
+								continue;
+						}
+						hearts[i].y--;
+						hearts[i].scale += 0.004;
+						hearts[i].alpha -= 0.013;
+						hearts[i].el.style.cssText = "left:"+hearts[i].x+"px;top:"+hearts[i].y+"px;opacity:"+hearts[i].alpha+";transform:scale("+hearts[i].scale+","+hearts[i].scale+") rotate(45deg);background:"+hearts[i].color+";z-index:99999";
+				}
+				requestAnimationFrame(gameloop);
+			}
+			function attachEvent(){
+					var old = typeof window.onclick==="function" && window.onclick;
+					window.onclick = function(event){
+							old && old();
+							createHeart(event);
+					}
+			}
+			function createHeart(event){
+				var d = document.createElement("div");
+				d.className = "heart";
+				hearts.push({
+						el : d,
+						x : event.clientX - 5,
+						y : event.clientY - 5,
+						scale : 1,
+						alpha : 1,
+						color : randomColor()
+				});
+				document.body.appendChild(d);
+		}
+		function css(css){
+				var style = document.createElement("style");
+					style.type="text/css";
+					try{
+						style.appendChild(document.createTextNode(css));
+					}catch(ex){
+						style.styleSheet.cssText = css;
+					}
+					document.getElementsByTagName('head')[0].appendChild(style);
+		}
+			function randomColor(){
+					return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
+			}
+	})(window,document);
+</script>
+
+</html>

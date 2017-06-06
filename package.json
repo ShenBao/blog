@@ -27,7 +27,9 @@
                     "RegExp.md",
                     "全局对象.md",
                     "Events.md",
-                    "Function.md"
+                    "Function.md",
+                    "单体内置对象.md",
+                    "基本包装类型.md"
                 ]
             },
             {
