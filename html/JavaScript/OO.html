@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知秋的技术文档</title>
+        
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                知秋的技术文档
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../../index.html">Home</a></li><li><a href="#"><span></span>JavaScript</a><ul><li><a href="../../html/JavaScript/Array.html">Array</a></li><li><a href="../../html/JavaScript/Boolean.html">Boolean</a></li><li><a href="../../html/JavaScript/Date.html">Date</a></li><li><a href="../../html/JavaScript/Math.html">Math</a></li><li><a href="../../html/JavaScript/Number.html">Number</a></li><li><a href="../../html/JavaScript/String.html">String</a></li><li><a href="../../html/JavaScript/RegExp.html">RegExp</a></li><li><a href="../../html/JavaScript/全局对象.html">全局对象</a></li><li><a href="../../html/JavaScript/Events.html">Events</a></li><li><a href="../../html/JavaScript/Function.html">Function</a></li><li><a href="../../html/JavaScript/单体内置对象.html">单体内置对象</a></li><li><a href="../../html/JavaScript/基本包装类型.html">基本包装类型</a></li><li class="active"><a href="../../html/JavaScript/OO.html">OO</a></li></ul></li><li><a href="#"><span></span>Browser</a><ul><li><a href="../../html/Browser/Window.html">Window</a></li><li><a href="../../html/Browser/Navigator.html">Navigator</a></li><li><a href="../../html/Browser/Screen.html">Screen</a></li><li><a href="../../html/Browser/History.html">History</a></li><li><a href="../../html/Browser/Location.html">Location</a></li></ul></li><li><a href="#"><span></span>DOM</a><ul><li><a href="../../html/DOM/Document.html">Document</a></li><li><a href="../../html/DOM/Element.html">Element</a></li><li><a href="../../html/DOM/Attribute.html">Attribute</a></li><li><a href="../../html/DOM/Event.html">Event</a></li></ul></li></ul>    
+        </div>
+        
+        
+        <div class="forkgithub"><a target="_blank" href="https://github.com/ShenBao">fork on github</a></div>
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0OO">OO</a><ul><li><a href="#t1数据属性">数据属性</a></li><li><a href="#t2访问器属性">访问器属性</a><ul><li><a href="#t3定义多个属性">定义多个属性</a></li><li><a href="#t4读取属性">读取属性</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0OO">OO <a href="#t0OO"> # </a></h1>
+<h3 id="t1&#x6570;&#x636E;&#x5C5E;&#x6027;">&#x6570;&#x636E;&#x5C5E;&#x6027; <a href="#t1&#x6570;&#x636E;&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x6570;&#x636E;&#x5C5E;&#x6027;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x503C;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x503C;</p>
+<ul>
+<li>[[Configurable]]&#xFF1A;&#x8868;&#x793A;&#x80FD;&#x5426;&#x901A;&#x8FC7;delete &#x5220;&#x9664;&#x5C5E;&#x6027;&#x4ECE;&#x800C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#xFF0C;&#x80FD;&#x5426;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x6216;&#x8005;&#x80FD;&#x5426;&#x628A;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x4E3A;&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#x3002;&#x50CF;&#x524D;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#x3002;configurable &#x8BBE;&#x7F6E;&#x4E3A;false&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x80FD;&#x4ECE;&#x5BF9;&#x8C61;&#x4E2D;&#x5220;&#x9664;&#x5C5E;&#x6027;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x8C03;&#x7528;delete&#xFF0C;&#x5219;&#x5728;&#x975E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#xFF0C;&#x800C;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x4F1A;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x4E00;&#x65E6;&#x628A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E3A;&#x4E0D;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x628A;&#x5B83;&#x53D8;&#x56DE;&#x53EF;&#x914D;&#x7F6E;&#x4E86;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x518D;&#x8C03;Object.defineProperty()&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x9664;writable &#x4E4B;&#x5916;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x90FD;&#x4F1A;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x8C03;&#x7528;Object.defineProperty()&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x540C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x5728;&#x628A;configurable&#x7279;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;false &#x4E4B;&#x540E;&#x5C31;&#x4F1A;&#x6709;&#x9650;&#x5236;&#x4E86;.</li>
+<li>[[Enumerable]]&#xFF1A;&#x8868;&#x793A;&#x80FD;&#x5426;&#x901A;&#x8FC7;for-in &#x5FAA;&#x73AF;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x3002;&#x50CF;&#x524D;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#x3002;</li>
+<li>[[Writable]]&#xFF1A;&#x8868;&#x793A;&#x80FD;&#x5426;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x3002;&#x50CF;&#x524D;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#x3002;&#x5982;&#x679C;&#x5C1D;&#x8BD5;&#x4E3A;&#x5B83;&#x6307;&#x5B9A;&#x65B0;&#x503C;&#xFF0C;&#x5219;&#x5728;&#x975E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x5C06;&#x88AB;&#x5FFD;&#x7565;&#xFF1B;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x5C06;&#x4F1A;&#x5BFC;&#x81F4;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x3002;</li>
+<li>[[Value]]&#xFF1A;&#x5305;&#x542B;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x6570;&#x636E;&#x503C;&#x3002;&#x8BFB;&#x53D6;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ECE;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x8BFB;&#xFF1B;&#x5199;&#x5165;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x628A;&#x65B0;&#x503C;&#x4FDD;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined&#x3002;</li>
+</ul>
+<p>Object.defineProperty() &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5C5E;&#x6027;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x3001;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x5B57;&#x548C;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x7B26;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x63CF;&#x8FF0;&#x7B26;&#xFF08;descriptor&#xFF09;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x662F;&#xFF1A;configurable&#x3001;enumerable&#x3001;writable &#x548C;value&#x3002;</p>
+<p>&#x5728;&#x8C03;&#x7528;Object.defineProperty()&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;configurable&#x3001;enumerable &#x548C;writable &#x7279;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x90FD;&#x662F;false</p>
+<pre><code>var person = {}
+Object.defineProperty(person,&apos;name&apos;,{
+    configurable:false,//&#x80FD;&#x5426;&#x4F7F;&#x7528;delete&#x3001;&#x80FD;&#x5426;&#x9700;&#x6539;&#x5C5E;&#x6027;&#x7279;&#x6027;&#x3001;&#x6216;&#x80FD;&#x5426;&#x4FEE;&#x6539;&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#x3001;&#xFF0C;false&#x4E3A;&#x4E0D;&#x53EF;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true
+    enumerable:false,//&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x662F;&#x5426;&#x53EF;&#x901A;&#x8FC7;for-in&#x5FAA;&#x73AF;&#xFF0C;flase&#x4E3A;&#x4E0D;&#x53EF;&#x5FAA;&#x73AF;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true
+    writable:false,//&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x662F;&#x5426;&#x53EF;&#x4FEE;&#x6539;,flase&#x4E3A;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true
+    value:&apos;xiaoming&apos; //&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined
+});
+
+//value
+console.log(person);//xiaoming&#xFF0C;&#x9ED8;&#x8BA4;value
+
+//writable
+person.name=&quot;qiang&quot;;
+console.log(person);//xiaoming&#xFF0C;&#x4E0D;&#x53EF;&#x4FEE;&#x6539;value
+
+//enumerable
+for(var i in person){
+    console.log(person[i]) //&#x65E0;&#x7ED3;&#x679C;&#xFF0C;&#x4E0D;&#x53EF;&#x5FAA;&#x73AF;
+}
+
+//configurable
+delete person.name
+console.log(person.name)//xiaoming&#xFF0C;&#x4E0D;&#x53EF;&#x5220;&#x9664;
+
+Object.defineProperty(person,&apos;name&apos;,{
+    configurable:true //&#x4E0D;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x5C06;&#x629B;&#x51FA;&#x9519;&#x8BEF;
+});
+</code></pre><h2 id="t2&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;">&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027; <a href="#t2&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;"> # </a></h2>
+<p>getter &#x548C;setter &#x51FD;&#x6570;</p>
+<ul>
+<li>[[Configurable]]&#xFF1A;&#x8868;&#x793A;&#x80FD;&#x5426;&#x901A;&#x8FC7;delete &#x5220;&#x9664;&#x5C5E;&#x6027;&#x4ECE;&#x800C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#xFF0C;&#x80FD;&#x5426;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x6216;&#x8005;&#x80FD;&#x5426;&#x628A;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x4E3A;&#x6570;&#x636E;&#x5C5E;&#x6027;&#x3002;&#x5BF9;&#x4E8E;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#x3002;</li>
+<li>[[Enumerable]]&#xFF1A;&#x8868;&#x793A;&#x80FD;&#x5426;&#x901A;&#x8FC7;for-in &#x5FAA;&#x73AF;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x3002;&#x5BF9;&#x4E8E;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#x3002;</li>
+<li>[[Get]]&#xFF1A;&#x5728;&#x8BFB;&#x53D6;&#x5C5E;&#x6027;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined&#x3002;</li>
+<li>[[Set]]&#xFF1A;&#x5728;&#x5199;&#x5165;&#x5C5E;&#x6027;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined&#x3002;</li>
+</ul>
+<p>&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;Object.defineProperty()&#x6765;&#x5B9A;&#x4E49;.</p>
+<pre><code>var book = {
+    _year: 2004,//&#x5C5E;&#x6027;&#x524D;&#x9762;&#x52A0;_&#xFF0C;&#x4EE3;&#x8868;&#x5C5E;&#x6027;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;
+    edition: 0
+}
+Object.defineProperty(book,&apos;year&apos;,{
+    get: function(){
+        return this._year;
+    },
+    set: function(newValue){
+        if(newValue &gt; 2004){
+            this._year = newValue;
+            this.edition += newValue - 2004
+        }
+    }
+});
+console.log(book.year)//2004
+book.year = 2006;
+console.log(book.year)//2006
+console.log(book.edition)//2
+</code></pre><h4 id="t3&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027;">&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027; <a href="#t3&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027;"> # </a></h4>
+<pre><code>var book = {};
+   Object.defineProperties(book, {
+       _year: {
+        value:2004,
+        writable:true
+       },
+       edition: {
+           value: 0,
+           writable:true
+       },
+       year: {
+           get: function() {
+               return this._year;
+           },
+           set: function(newValue) {
+               if (newValue &gt; 2004) {
+                   this._year = newValue;
+                   this.edition += newValue - 2004
+               }
+           }
+       }
+   });
+   console.log(book.year) //2004
+   book.year = 2006;
+   console.log(book.year) //2006
+   console.log(book.edition) //2
+</code></pre><h4 id="t4&#x8BFB;&#x53D6;&#x5C5E;&#x6027;">&#x8BFB;&#x53D6;&#x5C5E;&#x6027; <a href="#t4&#x8BFB;&#x53D6;&#x5C5E;&#x6027;"> # </a></h4>
+<pre><code>var book = {};
+    Object.defineProperties(book, {
+        _year: {
+            value:2004,
+            writable:true
+        },
+        edition: {
+            value: 0,
+            writable:true
+        },
+        year: {
+            get: function() {
+                return this._year;
+            },
+            set: function(newValue) {
+                if (newValue &gt; 2004) {
+                    this._year = newValue;
+                    this.edition += newValue - 2004
+                }
+            }
+        }
+    });
+    console.log(book.year) //2004
+    book.year = 2006;
+    console.log(book.year) //2006
+    console.log(book.edition) //2
+    //&#x8BFB;&#x53D6;&#x5C5E;&#x6027;
+    var descriptor__year = Object.getOwnPropertyDescriptor(book,&apos;_year&apos;);
+    var descriptor_year = Object.getOwnPropertyDescriptor(book,&apos;year&apos;);
+</code></pre>
+        <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+		(function(window,document,undefined){
+			var hearts = [];
+			window.requestAnimationFrame = (function(){
+					return window.requestAnimationFrame || 
+							   window.webkitRequestAnimationFrame ||
+							   window.mozRequestAnimationFrame ||
+							   window.oRequestAnimationFrame ||
+							   window.msRequestAnimationFrame ||
+							   function (callback){
+									   setTimeout(callback,1000/60);
+							   }
+			})();
+			init();
+			function init(){
+					css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+					attachEvent();
+					gameloop();
+			}
+			function gameloop(){
+					for(var i=0;i<hearts.length;i++){
+						if(hearts[i].alpha <=0){
+								document.body.removeChild(hearts[i].el);
+								hearts.splice(i,1);
+								continue;
+						}
+						hearts[i].y--;
+						hearts[i].scale += 0.004;
+						hearts[i].alpha -= 0.013;
+						hearts[i].el.style.cssText = "left:"+hearts[i].x+"px;top:"+hearts[i].y+"px;opacity:"+hearts[i].alpha+";transform:scale("+hearts[i].scale+","+hearts[i].scale+") rotate(45deg);background:"+hearts[i].color+";z-index:99999";
+				}
+				requestAnimationFrame(gameloop);
+			}
+			function attachEvent(){
+					var old = typeof window.onclick==="function" && window.onclick;
+					window.onclick = function(event){
+							old && old();
+							createHeart(event);
+					}
+			}
+			function createHeart(event){
+				var d = document.createElement("div");
+				d.className = "heart";
+				hearts.push({
+						el : d,
+						x : event.clientX - 5,
+						y : event.clientY - 5,
+						scale : 1,
+						alpha : 1,
+						color : randomColor()
+				});
+				document.body.appendChild(d);
+		}
+		function css(css){
+				var style = document.createElement("style");
+					style.type="text/css";
+					try{
+						style.appendChild(document.createTextNode(css));
+					}catch(ex){
+						style.styleSheet.cssText = css;
+					}
+					document.getElementsByTagName('head')[0].appendChild(style);
+		}
+			function randomColor(){
+					return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
+			}
+	})(window,document);
+</script>
+
+</html>
