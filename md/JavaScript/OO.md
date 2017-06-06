@@ -45,6 +45,19 @@ Object.defineProperty(person,'name',{
 });
 ```
 
+## 访问器属性
+
+getter 和setter 函数
+
+- [[Configurable]]：表示能否通过delete 删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为数据属性。对于直接在对象上定义的属性，这个特性的默认值为true。
+- [[Enumerable]]：表示能否通过for-in 循环返回属性。对于直接在对象上定义的属性，这个特性的默认值为true。
+- [[Get]]：在读取属性时调用的函数。默认值为undefined。
+- [[Set]]：在写入属性时调用的函数。默认值为undefined。
+
+访问器属性不能直接定义，必须使用Object.defineProperty()来定义.
+
+
+
 
 
 
