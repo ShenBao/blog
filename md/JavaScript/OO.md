@@ -56,6 +56,27 @@ getter 和setter 函数
 
 访问器属性不能直接定义，必须使用Object.defineProperty()来定义.
 
+```
+var book = {
+    _year: 2004,//属性前面加_，代表属性只能通过对象方法访问
+    edition: 0
+}
+Object.defineProperty(book,'year',{
+    get: function(){
+        return this._year;
+    },
+    set: function(newValue){
+        if(newValue > 2004){
+            this._year = newValue;
+            this.edition += newValue - 2004
+        }
+    }
+});
+console.log(book.year)//2004
+book.year = 2006;
+console.log(book.year)//2006
+console.log(book.edition)//2
+```
 
 
 
