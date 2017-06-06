@@ -77,7 +77,69 @@ book.year = 2006;
 console.log(book.year)//2006
 console.log(book.edition)//2
 ```
+#### 定义多个属性
 
+```
+var book = {};
+   Object.defineProperties(book, {
+       _year: {
+        value:2004,
+        writable:true
+       },
+       edition: {
+           value: 0,
+           writable:true
+       },
+       year: {
+           get: function() {
+               return this._year;
+           },
+           set: function(newValue) {
+               if (newValue > 2004) {
+                   this._year = newValue;
+                   this.edition += newValue - 2004
+               }
+           }
+       }
+   });
+   console.log(book.year) //2004
+   book.year = 2006;
+   console.log(book.year) //2006
+   console.log(book.edition) //2
+```
+
+#### 读取属性
+```
+var book = {};
+    Object.defineProperties(book, {
+        _year: {
+            value:2004,
+            writable:true
+        },
+        edition: {
+            value: 0,
+            writable:true
+        },
+        year: {
+            get: function() {
+                return this._year;
+            },
+            set: function(newValue) {
+                if (newValue > 2004) {
+                    this._year = newValue;
+                    this.edition += newValue - 2004
+                }
+            }
+        }
+    });
+    console.log(book.year) //2004
+    book.year = 2006;
+    console.log(book.year) //2006
+    console.log(book.edition) //2
+    //读取属性
+    var descriptor__year = Object.getOwnPropertyDescriptor(book,'_year');
+    var descriptor_year = Object.getOwnPropertyDescriptor(book,'year');
+```
 
 
 
