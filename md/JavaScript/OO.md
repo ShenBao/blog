@@ -54,7 +54,7 @@ getter 和setter 函数
 - [[Get]]：在读取属性时调用的函数。默认值为undefined。
 - [[Set]]：在写入属性时调用的函数。默认值为undefined。
 
-一般都使用两个非标准的方法：__defineGetter__()和__defineSetter__()
+`一般都使用两个非标准的方法：__defineGetter__()和__defineSetter__()`
 
 访问器属性不能直接定义，必须使用Object.defineProperty()来定义.
 
@@ -80,6 +80,8 @@ console.log(book.year)//2006
 console.log(book.edition)//2
 ```
 #### 定义多个属性
+
+`Object.defineProperties()` : 这个方法接收两个对象参数：第一个对象是要添加和修改其属性的对象，第二个对象的属性与第一个对象中要添加或修改的属性一一对应。
 
 ```
 var book = {};
@@ -111,6 +113,9 @@ var book = {};
 ```
 
 #### 读取属性
+
+`Object.getOwnPropertyDescriptor()` : 这个方法接收两个参数：属性所在的对象和要读取其描述符的属性名称。返回值是一个对象，如果是访问器属性，这个对象的属性有configurable、enumerable、get 和set；如果是数据属性，这个对象的属性有configurable、enumerable、writable 和value.
+
 ```
 var book = {};
     Object.defineProperties(book, {
