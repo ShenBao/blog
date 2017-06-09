@@ -148,6 +148,28 @@ var book = {};
     var descriptor_year = Object.getOwnPropertyDescriptor(book,'year');
 ```
 
+## 其他
+
+Person.prototype
+
+Person.prototype.constructor 又指回了Person
+
+Object.getPrototypeOf(person1)
+
+delete person1.name;
+
+hasOwnProperty() 方法可以检测一个属性是存在于实例中，还是存在于原型中;这个方法（不要忘了它是从Object 继承来的）只在给定属性存在于对象实例中时，才会返true。
+
+ECMAScript 5 的Object.getOwnPropertyDescriptor()方法只能用于实例属性，要取得原型属性的描述符，必须直接在原型对象上调用Object.getOwnProperty-Descriptor()方法。
+
+
+同时使用hasOwnProperty()方法和in 操作符，就可以确定该属性到底是存在于对象中，还是存在于原型中，如下所示。
+```
+function hasPrototypeProperty(object, name){
+    return !object.hasOwnProperty(name) && (name in object);
+}
+```
+
 
 
 
