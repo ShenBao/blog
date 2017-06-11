@@ -8,7 +8,6 @@
 PS： <b style="font-Size:22px;">[点击查看 ShenBao Blog](https://shenbao.github.io)</b>
 
 ##  JavaScript
-
 - [Array](./html/JavaScript/Array.html)
 - [Boolean](./html/JavaScript/Boolean.html)
 - [Date](./html/JavaScript/Date.html)
@@ -20,7 +19,6 @@ PS： <b style="font-Size:22px;">[点击查看 ShenBao Blog](https://shenbao.git
 - [Events](./html/JavaScript/Events.html)
 
 ##  Browser
-
 - [Window](./html/Browser/Window.html)
 - [Navigator](./html/Browser/Navigator.html)
 - [Screen](./html/Browser/Screen.html)
@@ -28,13 +26,10 @@ PS： <b style="font-Size:22px;">[点击查看 ShenBao Blog](https://shenbao.git
 - [Location](./html/Browser/Location.html)
 
 ##  DOM
-
 - [Document](./html/DOM/Document.html)
 - [Element](./html/DOM/Element.html)
 - [Attribute](./html/DOM/Attribute.html)
 - [Event](./html/DOM/Event.html)
-
-
 
 
 ## 结束语
