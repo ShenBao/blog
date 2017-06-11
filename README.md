@@ -1,3 +1,3 @@
 # [技术文档](https://shenbao.github.io/blog)
 
-# [Blog](https://shenbao.github.io)
+# [ShenBao Blog](https://shenbao.github.io)
