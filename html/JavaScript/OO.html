@@ -37,7 +37,7 @@
 <div class="container">
 
     <div class="page-toc">
-        <ul><li><a href="#t0OO">OO</a><ul><li><a href="#t1数据属性">数据属性</a></li><li><a href="#t2访问器属性">访问器属性</a><ul><li><a href="#t3定义多个属性">定义多个属性</a></li><li><a href="#t4读取属性">读取属性</a></li></ul></li></ul></li></ul>
+        <ul><li><a href="#t0OO">OO</a><ul><li><a href="#t1数据属性">数据属性</a></li><li><a href="#t2访问器属性">访问器属性</a><ul><li><a href="#t3定义多个属性">定义多个属性</a></li><li><a href="#t4读取属性">读取属性</a></li></ul></li><li><a href="#t5其他">其他</a></li></ul></li></ul>
     </div>
     
     <div class="content markdown-body">
@@ -88,7 +88,7 @@ Object.defineProperty(person,&apos;name&apos;,{
 <li>[[Get]]&#xFF1A;&#x5728;&#x8BFB;&#x53D6;&#x5C5E;&#x6027;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined&#x3002;</li>
 <li>[[Set]]&#xFF1A;&#x5728;&#x5199;&#x5165;&#x5C5E;&#x6027;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;undefined&#x3002;</li>
 </ul>
-<p>&#x4E00;&#x822C;&#x90FD;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x975E;&#x6807;&#x51C6;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<strong>defineGetter</strong>()&#x548C;<strong>defineSetter</strong>()</p>
+<p><code>&#x4E00;&#x822C;&#x90FD;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x975E;&#x6807;&#x51C6;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;__defineGetter__()&#x548C;__defineSetter__()</code></p>
 <p>&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;Object.defineProperty()&#x6765;&#x5B9A;&#x4E49;.</p>
 <pre><code>var book = {
     _year: 2004,//&#x5C5E;&#x6027;&#x524D;&#x9762;&#x52A0;_&#xFF0C;&#x4EE3;&#x8868;&#x5C5E;&#x6027;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;
@@ -110,6 +110,7 @@ book.year = 2006;
 console.log(book.year)//2006
 console.log(book.edition)//2
 </code></pre><h4 id="t3&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027;">&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027; <a href="#t3&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x5C5E;&#x6027;"> # </a></h4>
+<p><code>Object.defineProperties()</code> : &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x8981;&#x6DFB;&#x52A0;&#x548C;&#x4FEE;&#x6539;&#x5176;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x4E0E;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x8981;&#x6DFB;&#x52A0;&#x6216;&#x4FEE;&#x6539;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;</p>
 <pre><code>var book = {};
    Object.defineProperties(book, {
        _year: {
@@ -137,6 +138,7 @@ console.log(book.edition)//2
    console.log(book.year) //2006
    console.log(book.edition) //2
 </code></pre><h4 id="t4&#x8BFB;&#x53D6;&#x5C5E;&#x6027;">&#x8BFB;&#x53D6;&#x5C5E;&#x6027; <a href="#t4&#x8BFB;&#x53D6;&#x5C5E;&#x6027;"> # </a></h4>
+<p><code>Object.getOwnPropertyDescriptor()</code> : &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5C5E;&#x6027;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x548C;&#x8981;&#x8BFB;&#x53D6;&#x5176;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6709;configurable&#x3001;enumerable&#x3001;get &#x548C;set&#xFF1B;&#x5982;&#x679C;&#x662F;&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6709;configurable&#x3001;enumerable&#x3001;writable &#x548C;value.</p>
 <pre><code>var book = {};
     Object.defineProperties(book, {
         _year: {
@@ -166,6 +168,17 @@ console.log(book.edition)//2
     //&#x8BFB;&#x53D6;&#x5C5E;&#x6027;
     var descriptor__year = Object.getOwnPropertyDescriptor(book,&apos;_year&apos;);
     var descriptor_year = Object.getOwnPropertyDescriptor(book,&apos;year&apos;);
+</code></pre><h2 id="t5&#x5176;&#x4ED6;">&#x5176;&#x4ED6; <a href="#t5&#x5176;&#x4ED6;"> # </a></h2>
+<p>Person.prototype</p>
+<p>Person.prototype.constructor &#x53C8;&#x6307;&#x56DE;&#x4E86;Person</p>
+<p>Object.getPrototypeOf(person1)</p>
+<p>delete person1.name;</p>
+<p>hasOwnProperty() &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x68C0;&#x6D4B;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x5B58;&#x5728;&#x4E8E;&#x5B9E;&#x4F8B;&#x4E2D;&#xFF0C;&#x8FD8;&#x662F;&#x5B58;&#x5728;&#x4E8E;&#x539F;&#x578B;&#x4E2D;;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF08;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x5B83;&#x662F;&#x4ECE;Object &#x7EE7;&#x627F;&#x6765;&#x7684;&#xFF09;&#x53EA;&#x5728;&#x7ED9;&#x5B9A;&#x5C5E;&#x6027;&#x5B58;&#x5728;&#x4E8E;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x4E2D;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x8FD4;true&#x3002;</p>
+<p>ECMAScript 5 &#x7684;Object.getOwnPropertyDescriptor()&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;&#x8981;&#x53D6;&#x5F97;&#x539F;&#x578B;&#x5C5E;&#x6027;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5FC5;&#x987B;&#x76F4;&#x63A5;&#x5728;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;Object.getOwnProperty-Descriptor()&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#x4F7F;&#x7528;hasOwnProperty()&#x65B9;&#x6CD5;&#x548C;in &#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x8BE5;&#x5C5E;&#x6027;&#x5230;&#x5E95;&#x662F;&#x5B58;&#x5728;&#x4E8E;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x8FD8;&#x662F;&#x5B58;&#x5728;&#x4E8E;&#x539F;&#x578B;&#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<pre><code>function hasPrototypeProperty(object, name){
+    return !object.hasOwnProperty(name) &amp;&amp; (name in object);
+}
 </code></pre>
         <div class="copyright">Created by <a href="https://github.com/shenbao" target="_blank">ShenBao</a></div>
     </div>
