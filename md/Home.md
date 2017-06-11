@@ -5,7 +5,7 @@
 > 大公司有大公司的玩法，小公司有小公司的折腾法，只是通过不同方法实现罢了！！！
 
 
-PS： <b style="font-Size:22px;">[点击这里查看 Blog](https://shenbao.github.io)</b>
+PS： <b style="font-Size:22px;">[点击查看 ShenBao Blog](https://shenbao.github.io)</b>
 
 ##  JavaScript
 
